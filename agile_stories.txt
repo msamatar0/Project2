@@ -1,0 +1,43 @@
+Agile Stories
+
+As a potential customer, I want a help button so that I can easily learn and understand the program
+
+As a potential customer, I want to be able to see a sales pitch so I can understand what the company wishes to accomplish with me
+
+As a potential customer, I want to be able to see a list of physical environments that are supported so I can determine if I can even use the products.
+
+As a potential customer, I want to be able to see how the product works in order to forge my expectations and better understand the product.
+
+As a potential customer, I want to see pricing options to choose one I would find most beneficial to me.
+
+As a potential customer, I want a maintenance plan readily available for the viewing so I can see what type of support I can expect.
+
+As a potential customer, I want to see a guarentee so that I can be confident in my purchase.
+
+As a potential customer, I want to see customer testimonials to see what other companies have had success with this product and how they feel about it.
+
+As a potential customer, I want to see contact methods so that I can call or mail to get a quote or ask more questions about the product.
+
+As an administrator, I'd like to be able to see what customers are thinking of our product so I can see who to keep in contact with.
+
+As an administrator, I'd like to differentiate between our key customers and customers that are just "nice to have" so that I can determine high-priority customers.
+
+As a potential customer, I'd like to be able to rate the product so that I can provide feedback as to whether or not I like it.
+
+As an administrator, I'd like to be able to update the customer list so that I can keep addresses and ratings and other info up-to-date.
+
+As an administrator, I'd like to be add and delete customers so I can add new potential customers and remove uninterested parties.
+
+As a potential customer, I'd like to request a copy of this program so I can get more information!
+
+As an administrator, I want my changes to the customer list to be saved so I don't lose informaton.
+
+As a customer, I want to be able to order one or more iRobot devices so I can start using them at our location.
+
+As an administrator, I want to be able to view and print the customer list so I can see current potential customers.
+
+As an administrator, I want to keep track of the customers that we send pamphlets to so that I can solicit them further.
+
+As an administrator, I want to be able to produce a customer list sorted by customer name so that I can give it to my superior to look nice.
+
+As an administrator, I want to be able to produce a customer list containing only the key customers so that I can show my superiors our most important business.
