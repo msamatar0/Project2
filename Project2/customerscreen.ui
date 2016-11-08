@@ -117,7 +117,7 @@
     <string>How It Works</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton__pitch">
+  <widget class="QPushButton" name="pushButton_pitch">
    <property name="geometry">
     <rect>
      <x>250</x>
@@ -128,6 +128,19 @@
    </property>
    <property name="text">
     <string>Our Product</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_help">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Help</string>
    </property>
   </widget>
  </widget>
