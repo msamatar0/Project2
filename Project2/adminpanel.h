@@ -4,16 +4,16 @@
 #include <QDialog>
 
 namespace Ui {
-class adminpanel;
+class AdminPanel;
 }
 
-class adminpanel : public QDialog
+class AdminPanel : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit adminpanel(QWidget *parent = 0);
-    ~adminpanel();
+    explicit AdminPanel(QWidget *parent = 0);
+    ~AdminPanel();
 
 private:
     Ui::adminpanel *ui;
