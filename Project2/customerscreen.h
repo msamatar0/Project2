@@ -4,16 +4,16 @@
 #include <QDialog>
 
 namespace Ui {
-class CustomerScreen;
+class customerScreen;
 }
 
-class CustomerScreen : public QDialog
+class customerScreen : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit CustomerScreen(QWidget *parent = 0);
-    ~CustomerScreen();
+    explicit customerScreen(QWidget *parent = 0);
+    ~customerScreen();
 
 private:
     Ui::customerScreen *ui;

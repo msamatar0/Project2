@@ -1,14 +1,14 @@
 #include "adminpanel.h"
 #include "ui_adminpanel.h"
 
-AdminPanel::AdminPanel(QWidget *parent) :
+adminpanel::adminpanel(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::adminpanel)
 {
     ui->setupUi(this);
 }
 
-AdminPanel::~AdminPanel()
+adminpanel::~adminpanel()
 {
     delete ui;
 }
