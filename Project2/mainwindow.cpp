@@ -19,3 +19,10 @@ void MainWindow::on_login_pushButton_enter_clicked()
     customer->show();
     this->hide();
 }
+
+void MainWindow::on_actionAdministrator_Login_triggered()
+{
+    admin = new adminLogin(this);
+    admin->show();
+    this->hide();
+}

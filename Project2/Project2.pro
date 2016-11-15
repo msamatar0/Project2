@@ -15,12 +15,15 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     customerscreen.cpp \
-    adminpanel.cpp
+    adminpanel.cpp \
+    adminlogin.cpp
 
 HEADERS  += mainwindow.h \
     customerscreen.h \
-    adminpanel.h
+    adminpanel.h \
+    adminlogin.h
 
 FORMS    += mainwindow.ui \
     customerscreen.ui \
-    adminpanel.ui
+    adminpanel.ui \
+    adminlogin.ui
