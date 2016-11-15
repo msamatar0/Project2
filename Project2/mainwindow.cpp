@@ -12,3 +12,10 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::on_login_pushButton_enter_clicked()
+{
+    customer = new customerScreen(this);
+    customer->show();
+    this->hide();
+}
