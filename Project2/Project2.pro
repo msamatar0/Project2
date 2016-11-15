@@ -16,12 +16,14 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     customerscreen.cpp \
     adminpanel.cpp \
-    adminlogin.cpp
+    adminlogin.cpp \
+    record.cpp
 
 HEADERS  += mainwindow.h \
     customerscreen.h \
     adminpanel.h \
-    adminlogin.h
+    adminlogin.h \
+    record.h
 
 FORMS    += mainwindow.ui \
     customerscreen.ui \

@@ -2,6 +2,7 @@
 #define CUSTOMERSCREEN_H
 
 #include <QDialog>
+#include "record.h"
 
 namespace Ui {
 class customerScreen;
@@ -16,6 +17,7 @@ public:
     ~customerScreen();
 
 private:
+    Record record;
     Ui::customerScreen *ui;
 };
 
