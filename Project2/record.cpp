@@ -1,5 +1,6 @@
 #include "record.h"
 Record::Record()
+
 {
     //first read in each customer with their basic info,
     //format:
@@ -45,4 +46,35 @@ Record::Record()
         }
     }
 
+}
+QVector<QString> Record::getNameList() const{
+    return name;
+}
+
+QVector<QString> Record::getAddressList1() const{
+    return addressLine1;
+}
+
+QVector<QString> Record::getAddressList2() const{
+    return addressLine2;
+}
+
+QVector<QString> Record::getInterestList() const{
+    return interest;
+}
+
+QVector<QString> Record::getStatusList() const{
+    return status;
+}
+
+QVector<bool> Record::getKeyList() const{
+    return isKey;
+}
+
+QVector<bool> Record::getRecievedList() const{
+    return hasRecieved;
+}
+
+QVector<QString> Record::getTestimonial() const{
+    return testimonial;
 }

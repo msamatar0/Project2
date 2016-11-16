@@ -19,6 +19,14 @@ class Record
 {
 public:
     Record();
+    QVector<QString> getNameList() const;
+    QVector<QString> getAddressList1() const;
+    QVector<QString> getAddressList2() const;
+    QVector<QString> getInterestList() const;
+    QVector<QString> getStatusList() const;
+    QVector<bool> getKeyList() const;
+    QVector<bool> getRecievedList() const;
+    QVector<QString> getTestimonial() const;
 
 
 
