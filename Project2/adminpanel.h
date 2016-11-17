@@ -2,6 +2,7 @@
 #define ADMINPANEL_H
 
 #include <QDialog>
+#include "admincustomerlist.h"
 
 namespace Ui {
 class adminpanel;
@@ -15,8 +16,12 @@ public:
     explicit adminpanel(QWidget *parent = 0);
     ~adminpanel();
 
+private slots:
+    void on_admin_pushButton_customers_clicked();
+
 private:
     Ui::adminpanel *ui;
+    adminCustomerList *customerListWindow;
 };
 
 #endif // ADMINPANEL_H

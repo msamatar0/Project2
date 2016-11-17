@@ -12,3 +12,10 @@ adminpanel::~adminpanel()
 {
     delete ui;
 }
+
+void adminpanel::on_admin_pushButton_customers_clicked()
+{
+    customerListWindow = new adminCustomerList(this);
+    this->hide();
+    customerListWindow->show();
+}

@@ -17,15 +17,18 @@ SOURCES += main.cpp\
     customerscreen.cpp \
     adminpanel.cpp \
     adminlogin.cpp \
-    record.cpp
+    record.cpp \
+    admincustomerlist.cpp
 
 HEADERS  += mainwindow.h \
     customerscreen.h \
     adminpanel.h \
     adminlogin.h \
-    record.h
+    record.h \
+    admincustomerlist.h
 
 FORMS    += mainwindow.ui \
     customerscreen.ui \
     adminpanel.ui \
-    adminlogin.ui
+    adminlogin.ui \
+    admincustomerlist.ui
