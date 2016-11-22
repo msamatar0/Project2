@@ -47,6 +47,33 @@ Record::Record()
     }
 
 }
+//this will be used later once we are adding members,
+//we can have a simple window pop up whenver a person
+//logs on who is not already in the database
+void Record::addCustomer(QString inName, QString inAddressLine1,
+                         QString inAddressLine2, QString inInterest,
+                         QString inStatus){
+    //input variables will be linked to GUI
+
+
+    name.push_back(inName);
+    addressLine1.push_back(inAddressLine1);
+    addressLine2.push_back(inAddressLine2);
+    status.push_back(inStatus);
+    interest.push_back(inInterest);
+
+    //if is key, push back true, else false
+    isKey.push_back(inStatus=="key");
+
+    //new members have not recieved the pamphlet (by default)
+    hasRecieved.push_back('n');
+
+    //testemonials handled seperately
+
+
+
+}
+
 QVector<QString> Record::getNameList() const{
     return name;
 }
@@ -78,3 +105,11 @@ QVector<bool> Record::getRecievedList() const{
 QVector<QString> Record::getTestimonial() const{
     return testimonial;
 }
+bool Record::checkName(QString inName){
+    return (this->name.contains(inName));
+}
+int Record::findUserIndex(QString inName){
+    return (this->name.indexOf(inName));
+
+}
+

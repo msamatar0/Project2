@@ -27,7 +27,11 @@ public:
     QVector<bool> getKeyList() const;
     QVector<bool> getRecievedList() const;
     QVector<QString> getTestimonial() const;
-
+    void addCustomer(QString inName, QString inAddressLine1,
+                     QString inAddressLine2, QString inInterest,
+                     QString inStatus);
+    bool checkName(QString inName);
+    int findUserIndex(QString inName);
 
 
 private:
