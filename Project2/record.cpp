@@ -92,6 +92,9 @@ void Record::save(){
 //this will be used later once we are adding members,
 //we can have a simple window pop up whenver a person
 //logs on who is not already in the database
+/*
+ *
+ * THIS CODE HAS NOT BEEN DEBUGGED YET */
 void Record::addCustomer(QString inName, QString inAddressLine1,
                          QString inAddressLine2, QString inInterest,
                          QString inStatus){
@@ -158,4 +161,9 @@ void Record::setUserIndex(int inIndex){
    userIndex = inIndex;
 }
 
-
+int Record::getUserIndex(){
+    return userIndex;
+}
+bool Record::getHasRecieved(int index){
+    return (hasRecieved[index]);
+}

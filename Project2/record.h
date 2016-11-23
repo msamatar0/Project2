@@ -34,6 +34,8 @@ public:
     int findUserIndex(QString inName);
     void save();
     void setUserIndex(int inIndex);
+    int getUserIndex();
+    bool getHasRecieved(int index);
 
 private:
     //parallel vectors hold relevant data
