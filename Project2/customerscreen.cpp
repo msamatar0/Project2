@@ -19,3 +19,8 @@ void customerScreen::on_pushButton_products_clicked()
     this->hide();
     products->show();
 }
+
+void customerScreen::on_pushButton_requestPamphlet_clicked()
+{
+   record.save();
+}

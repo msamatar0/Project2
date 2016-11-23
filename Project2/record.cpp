@@ -16,11 +16,14 @@ Record::Record()
 
     int index = 0;
 
-    QFile inputFile("customerdata.txt");
+    QFile inputFile("../Resources/customerdata.txt");
 
     qDebug() << "filenamed\n";
     if(inputFile.open(QIODevice::ReadOnly)){
         QTextStream fin(&inputFile);
+        fin >> userIndex;
+        fin.readLine();
+
 
         qDebug() << "YEEAOW";
         while(!fin.atEnd()){
@@ -43,6 +46,45 @@ Record::Record()
             ++index;
 
             //testimonials will be taken care of seperately, they are in a different file.
+        }
+    }
+
+}
+void Record::save(){
+    int index=0;
+    QFile outputFile("../Resources/customerdata.txt");
+
+    if(outputFile.open(QIODevice::WriteOnly)){
+        QTextStream fout(&outputFile);
+        fout << userIndex << endl;
+        for(index=0;index<name.size();++index){
+            qDebug() << "round " << index << "...." << endl;
+            qDebug() << name[index] << endl;
+            qDebug() << addressLine1[index] << endl;
+            qDebug() << addressLine2[index] << endl;
+            qDebug() << interest[index] << endl;
+            qDebug() << status[index] << endl;
+            if(hasRecieved[index])
+                qDebug() << 'y' << endl;
+            else
+                qDebug() << 'n' << endl;
+
+            qDebug() << endl;
+
+
+            fout << name[index] << endl;
+            fout << addressLine1[index] << endl;
+            fout << addressLine2[index] << endl;
+            fout << interest[index] << endl;
+            fout << status[index] << endl;
+            if(hasRecieved[index])
+                fout << 'y' << endl;
+            else
+                fout << 'n' << endl;
+
+            if((index+1)<name.size())
+                fout << endl;
+
         }
     }
 
@@ -112,4 +154,8 @@ int Record::findUserIndex(QString inName){
     return (this->name.indexOf(inName));
 
 }
+void Record::setUserIndex(int inIndex){
+   userIndex = inIndex;
+}
+
 

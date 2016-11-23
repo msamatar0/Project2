@@ -32,7 +32,8 @@ public:
                      QString inStatus);
     bool checkName(QString inName);
     int findUserIndex(QString inName);
-
+    void save();
+    void setUserIndex(int inIndex);
 
 private:
     //parallel vectors hold relevant data
@@ -44,6 +45,8 @@ private:
     QVector<bool> isKey;
     QVector<bool> hasRecieved;
     QVector<QString> testimonial;
+    //this is the index of the user which is logged in
+    int userIndex;
 
 };
 #endif
