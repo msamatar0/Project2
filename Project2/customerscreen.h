@@ -20,6 +20,8 @@ public:
 private slots:
     void on_pushButton_products_clicked();
 
+    void on_pushButton_requestPamphlet_clicked();
+
 private:
     Record record;
     productView *products;

@@ -40,7 +40,7 @@ public:
         customerScreen->resize(403, 330);
         pushButton_orderNow = new QPushButton(customerScreen);
         pushButton_orderNow->setObjectName(QStringLiteral("pushButton_orderNow"));
-        pushButton_orderNow->setGeometry(QRect(60, 80, 75, 23));
+        pushButton_orderNow->setGeometry(QRect(34, 80, 131, 23));
         pushButton_requestPamphlet = new QPushButton(customerScreen);
         pushButton_requestPamphlet->setObjectName(QStringLiteral("pushButton_requestPamphlet"));
         pushButton_requestPamphlet->setGeometry(QRect(40, 110, 111, 23));
@@ -55,10 +55,10 @@ public:
         pushButton_contact->setGeometry(QRect(60, 200, 75, 23));
         pushButton_guarantee = new QPushButton(customerScreen);
         pushButton_guarantee->setObjectName(QStringLiteral("pushButton_guarantee"));
-        pushButton_guarantee->setGeometry(QRect(230, 80, 111, 23));
+        pushButton_guarantee->setGeometry(QRect(220, 80, 131, 23));
         pushButton_products = new QPushButton(customerScreen);
         pushButton_products->setObjectName(QStringLiteral("pushButton_products"));
-        pushButton_products->setGeometry(QRect(250, 110, 75, 23));
+        pushButton_products->setGeometry(QRect(230, 110, 121, 23));
         pushButton_concept = new QPushButton(customerScreen);
         pushButton_concept->setObjectName(QStringLiteral("pushButton_concept"));
         pushButton_concept->setGeometry(QRect(240, 140, 91, 23));
@@ -83,7 +83,7 @@ public:
         pushButton_testimonial->setText(QApplication::translate("customerScreen", "See Customers!", 0));
         pushButton_contact->setText(QApplication::translate("customerScreen", "Contact Us!", 0));
         pushButton_guarantee->setText(QApplication::translate("customerScreen", "See our Guarantee", 0));
-        pushButton_products->setText(QApplication::translate("customerScreen", "Products", 0));
+        pushButton_products->setText(QApplication::translate("customerScreen", "View Products", 0));
         pushButton_concept->setText(QApplication::translate("customerScreen", "How It Works", 0));
         pushButton_pitch->setText(QApplication::translate("customerScreen", "Our Product", 0));
         pushButton_help->setText(QApplication::translate("customerScreen", "Help", 0));

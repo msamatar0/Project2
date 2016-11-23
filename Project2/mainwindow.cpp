@@ -27,6 +27,10 @@ void MainWindow::on_login_pushButton_enter_clicked()
     if(compareRec.checkName(name)){
        //will store this index at a later time in order to keep track of whcih company it is using the progam
        userIndex = compareRec.findUserIndex(name);
+       compareRec.setUserIndex(userIndex);
+
+       compareRec.save();
+       qDebug() << "User is already in the database" << " Index is: " << userIndex << endl;
        qDebug() << "User is already in the database" << " Index is: " << userIndex << endl;
         QMessageBox::information(this,"Logged In","Welcome Back!");
 

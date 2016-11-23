@@ -1,6 +1,7 @@
+3
 Los Angeles Airport
-1 World Way 
-Los Angeles, CA 90045 
+1 World Way
+Los Angeles, CA 90045
 very interested
 key
 y
@@ -27,7 +28,7 @@ nice to have
 y
 
 Los Angeles Dodgers
-1000 Elysian Park Avenue 
+1000 Elysian Park Avenue
 Los Angeles, CA 9 0012
 very interested
 nice to have
