@@ -12,3 +12,10 @@ customerScreen::~customerScreen()
 {
     delete ui;
 }
+
+void customerScreen::on_pushButton_products_clicked()
+{
+    products = new productView(this);
+    this->hide();
+    products->show();
+}

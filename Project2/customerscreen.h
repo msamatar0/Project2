@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "record.h"
+#include "productview.h"
 
 namespace Ui {
 class customerScreen;
@@ -16,8 +17,12 @@ public:
     explicit customerScreen(QWidget *parent = 0);
     ~customerScreen();
 
+private slots:
+    void on_pushButton_products_clicked();
+
 private:
     Record record;
+    productView *products;
     Ui::customerScreen *ui;
 };
 

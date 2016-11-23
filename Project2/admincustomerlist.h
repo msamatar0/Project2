@@ -17,6 +17,9 @@ public:
     explicit adminCustomerList(QWidget *parent = 0);
     ~adminCustomerList();
 
+private slots:
+    void on_customerList_pushButton_back_clicked();
+
 private:
     Ui::adminCustomerList *ui;
     void initCustomerList();

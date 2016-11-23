@@ -81,9 +81,9 @@
   <widget class="QPushButton" name="pushButton_guarantee">
    <property name="geometry">
     <rect>
-     <x>230</x>
+     <x>220</x>
      <y>80</y>
-     <width>111</width>
+     <width>131</width>
      <height>23</height>
     </rect>
    </property>
@@ -94,14 +94,14 @@
   <widget class="QPushButton" name="pushButton_products">
    <property name="geometry">
     <rect>
-     <x>250</x>
+     <x>230</x>
      <y>110</y>
-     <width>75</width>
+     <width>121</width>
      <height>23</height>
     </rect>
    </property>
    <property name="text">
-    <string>Products</string>
+    <string>View Products</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_concept">
