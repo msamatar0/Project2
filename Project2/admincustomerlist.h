@@ -20,9 +20,22 @@ public:
 private slots:
     void on_customerList_pushButton_back_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::adminCustomerList *ui;
     void initCustomerList();
+    void initOptionPanel();
+    void initRecord();
+
+    QVector<QString> names;
+    QVector<QString> address1;
+    QVector<QString> address2;
+    QVector<QString> rating;
+    QVector<QString> status;
+    QVector<bool> key;
+    QVector<bool> received;
+    QVector<QString> testimonial;
 
 };
 

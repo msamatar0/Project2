@@ -20,8 +20,11 @@ adminCustomerList::adminCustomerList(QWidget *parent) :
     QTextStream(stdout) << "after setupUI\n";
 #endif
 
+    initRecord();
+
 
     initCustomerList();
+    initOptionPanel();
 }
 
 adminCustomerList::~adminCustomerList()
@@ -29,19 +32,23 @@ adminCustomerList::~adminCustomerList()
     delete ui;
 }
 
-void adminCustomerList::initCustomerList() {
-    //TODO - use a draw method to draw the table rather than all this in a init method
-
+void adminCustomerList::initRecord() {
 
     Record *record = new Record();
 
-    QVector<QString> names = record->getNameList();
-    QVector<QString> address1 = record->getAddressList1();
-    QVector<QString> address2 = record->getAddressList2();
-    QVector<QString> rating = record->getInterestList();
-    QVector<QString> status = record->getStatusList();
-    QVector<bool> key = record->getKeyList();
-    QVector<bool> received = record->getRecievedList();
+    names = record->getNameList();
+    address1 = record->getAddressList1();
+    address2 = record->getAddressList2();
+    rating = record->getInterestList();
+    status = record->getStatusList();
+    key = record->getKeyList();
+    received = record->getRecievedList();
+    testimonial = record->getTestimonial();
+
+}
+
+void adminCustomerList::initCustomerList() {
+    //TODO - use a draw method to draw the table rather than all this in a init method
 
     //drawCustomerList();
 
@@ -61,7 +68,7 @@ void adminCustomerList::initCustomerList() {
 
         //When we have key/receieved working properly
         ui->customerList_customerList->setItem(i, 5, new QTableWidgetItem(status.at(i) == "key" ? "Yes" : "No"));
-        ui->customerList_customerList->setItem(i, 6, new QTableWidgetItem("yes"));
+        ui->customerList_customerList->setItem(i, 6, new QTableWidgetItem(received.at(i)));
 
     }
 }
@@ -70,4 +77,40 @@ void adminCustomerList::on_customerList_pushButton_back_clicked()
 {
     this->parentWidget()->show();
     this->close();
+}
+
+void adminCustomerList::initOptionPanel() {
+
+    ui->comboBox_customer->addItems(names.toList());
+
+}
+
+void adminCustomerList::on_pushButton_clicked()
+{
+    //initialize variables to be used from GUI
+    QString name = ui->comboBox_customer->currentText();
+    int index = ui->comboBox_customer->currentIndex();
+    bool changed = 0;
+
+    //handles check/nocheck
+    if(ui->radioButton_no->isChecked() ) {
+        QTextStream(stdout) << "no is checked\n";
+        status[index] = "nice to have";
+        changed = 1;
+
+    }
+    else if (ui->radioButton_yes->isChecked()) {
+        QTextStream(stdout) << "yes is checked\n";
+        status[index] = "key";
+        changed = 1;
+    }
+
+    //only save new record if something was changed
+    if(changed) {
+        Record *r = new Record(names, address1, address2, rating, status, key, received, testimonial);
+        r->save();
+        this->initRecord();
+        this->initCustomerList();
+    }
+
 }

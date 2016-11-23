@@ -50,6 +50,23 @@ Record::Record()
     }
 
 }
+
+Record::Record(QVector<QString> name, QVector<QString> address1, QVector<QString> address2,
+       QVector<QString> interest, QVector<QString> status, QVector<bool> key, QVector<bool> received,
+       QVector<QString> testimonial) {
+
+    this->name = name;
+    addressLine1 = address1;
+    addressLine2 = address2;
+    this->interest = interest;
+    this->status = status;
+    isKey = key;
+    hasRecieved = received;
+    this->testimonial = testimonial;
+
+}
+
+
 void Record::save(){
     int index=0;
     QFile outputFile("../Resources/customerdata.txt");
