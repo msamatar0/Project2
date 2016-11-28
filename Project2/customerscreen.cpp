@@ -36,3 +36,24 @@ void customerScreen::on_pushButton_requestPamphlet_clicked()
    }
    record.save();
 }
+
+void customerScreen::on_pushButton_concept_clicked()
+{
+    con = new concept(this);
+    this->hide();
+    con->show();
+}
+
+void customerScreen::on_pushButton_rating_clicked()
+{
+    rate = new ratingscreen(this);
+    this->hide();
+    rate->show();
+}
+
+void customerScreen::on_pushButton_guarantee_clicked()
+{
+    pitch = new salespitch(this);
+    this->hide();
+    pitch->show();
+}
