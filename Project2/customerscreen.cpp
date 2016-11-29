@@ -57,3 +57,9 @@ void customerScreen::on_pushButton_guarantee_clicked()
     this->hide();
     pitch->show();
 }
+
+void customerScreen::on_pushButton_back_clicked()
+{
+    this->parentWidget()->show();
+    this->close();
+}

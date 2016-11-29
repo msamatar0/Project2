@@ -19,7 +19,11 @@ SOURCES += main.cpp\
     adminlogin.cpp \
     record.cpp \
     admincustomerlist.cpp \
-    productview.cpp
+    productview.cpp \
+    ratingscreen.cpp \
+    concept.cpp \
+    salespitch.cpp \
+    newcustomer.cpp
 
 HEADERS  += mainwindow.h \
     customerscreen.h \
@@ -27,11 +31,19 @@ HEADERS  += mainwindow.h \
     adminlogin.h \
     record.h \
     admincustomerlist.h \
-    productview.h
+    productview.h \
+    ratingscreen.h \
+    salespitch.h \
+    concept.h \
+    newcustomer.h
 
 FORMS    += mainwindow.ui \
     customerscreen.ui \
     adminpanel.ui \
     adminlogin.ui \
     admincustomerlist.ui \
-    productview.ui
+    productview.ui \
+    ratingscreen.ui \
+    concept.ui \
+    salespitch.ui \
+    newcustomer.ui

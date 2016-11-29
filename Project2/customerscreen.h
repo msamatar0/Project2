@@ -31,6 +31,10 @@ private slots:
 
     void on_pushButton_guarantee_clicked();
 
+    void on_pushButton_clicked();
+
+    void on_pushButton_back_clicked();
+
 private:
     Record record;
     productView *products;

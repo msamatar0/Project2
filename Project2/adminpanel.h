@@ -19,6 +19,8 @@ public:
 private slots:
     void on_admin_pushButton_customers_clicked();
 
+    void on_admin_pushButton_logout_clicked();
+
 private:
     Ui::adminpanel *ui;
     adminCustomerList *customerListWindow;

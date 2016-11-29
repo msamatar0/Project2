@@ -19,3 +19,9 @@ void adminpanel::on_admin_pushButton_customers_clicked()
     this->hide();
     customerListWindow->show();
 }
+
+void adminpanel::on_admin_pushButton_logout_clicked()
+{
+    this->parentWidget()->show();
+    this->close();
+}

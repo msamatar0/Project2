@@ -23,7 +23,20 @@
     </rect>
    </property>
    <property name="text">
-    <string>Customers</string>
+    <string>Customer List</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="admin_pushButton_logout">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>250</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Log Out</string>
    </property>
   </widget>
  </widget>
