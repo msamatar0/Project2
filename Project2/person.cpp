@@ -1,5 +1,5 @@
 #include "person.h"
 
 QString person::getName() {
-    return this.name;
+    return this->name;
 }

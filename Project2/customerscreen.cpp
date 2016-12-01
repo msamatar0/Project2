@@ -63,3 +63,12 @@ void customerScreen::on_pushButton_back_clicked()
     this->parentWidget()->show();
     this->close();
 }
+
+void customerScreen::on_pushButton_help_clicked()
+{
+   helpMe = new help(this);
+   //helpMe->show();
+   //this->hide();
+   helpMe->show();
+
+}

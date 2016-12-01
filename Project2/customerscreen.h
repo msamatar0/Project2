@@ -7,6 +7,7 @@
 #include "ratingscreen.h"
 #include "concept.h"
 #include "salespitch.h"
+#include "help.h"
 
 namespace Ui {
 class customerScreen;
@@ -33,7 +34,10 @@ private slots:
 
     void on_pushButton_back_clicked();
 
+    void on_pushButton_help_clicked();
+
 private:
+    help *helpMe;
     Record record;
     productView *products;
     Ui::customerScreen *ui;
