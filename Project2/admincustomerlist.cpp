@@ -68,7 +68,8 @@ void adminCustomerList::initCustomerList() {
 
         //When we have key/receieved working properly
         ui->customerList_customerList->setItem(i, 5, new QTableWidgetItem(status.at(i) == "key" ? "Yes" : "No"));
-        ui->customerList_customerList->setItem(i, 6, new QTableWidgetItem(received.at(i)));
+        //ui->customerList_customerList->setItem(i, 6, new QTableWidgetItem(received.at(i)));
+        ui->customerList_customerList->setItem(i, 6, new QTableWidgetItem(received.at(i)? "Yes" : "No"));
 
     }
 }

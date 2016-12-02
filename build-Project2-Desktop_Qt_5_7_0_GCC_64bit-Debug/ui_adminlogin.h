@@ -42,6 +42,7 @@ public:
         login_lineEdit_password = new QLineEdit(adminLogin);
         login_lineEdit_password->setObjectName(QStringLiteral("login_lineEdit_password"));
         login_lineEdit_password->setGeometry(QRect(130, 135, 113, 22));
+        login_lineEdit_password->setEchoMode(QLineEdit::Password);
         login_label_username = new QLabel(adminLogin);
         login_label_username->setObjectName(QStringLiteral("login_label_username"));
         login_label_username->setGeometry(QRect(155, 70, 71, 16));

@@ -1,4 +1,6 @@
 #include "adminlogin.h"
+#include <QMessageBox>
+#include <QDebug>
 #include "ui_adminlogin.h"
 
 adminLogin::adminLogin(QWidget *parent) :
@@ -21,24 +23,31 @@ void adminLogin::on_login_pushButton_back_clicked()
 
 void adminLogin::on_login_pushButton_login_clicked()
 {
-    QString username = ui->login_label_username->text();
-    QString password = ui->login_label_password->text();
+    QString username = ui->login_lineEdit_username->text();
+    QString password = ui->login_lineEdit_password->text();
 
     //attempt login function
 
-    bool successful = login(username, password);
-    if(successful)
+    if(login(username,password))
     {
+        QMessageBox::information(this,"Success","Welcome, Administrator");
         admin = new adminpanel(this);
         admin->show();
         this->hide();
+    }
+    else{
+        QMessageBox::warning(this,"Error","Incorrect username or pasword! Please try agin.");
     }
 
 
 }
 
 bool adminLogin::login(QString username, QString password) {
+    QString correctName = "admin";
+    QString correctPassword = "password";
+    qDebug() << username << endl << correctName << endl;
+    qDebug() << password << endl << correctPassword << endl;
 
-    return 1;
+    return (username==correctName && password==correctPassword);
 
 }
