@@ -184,3 +184,6 @@ int Record::getUserIndex(){
 bool Record::getHasRecieved(int index){
     return (hasRecieved[index]);
 }
+void Record::setHasRecieved(int index){
+   hasRecieved[index] = true;
+}

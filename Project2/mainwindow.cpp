@@ -32,7 +32,8 @@ void MainWindow::on_login_pushButton_enter_clicked()
        compareRec.save();
        qDebug() << "User is already in the database" << " Index is: " << userIndex << endl;
        qDebug() << "User is already in the database" << " Index is: " << userIndex << endl;
-        QMessageBox::information(this,"Logged In","Welcome Back!");
+        QMessageBox::information(this,"Logged In","Welcome Back " + name + "!");
+
 
     }
     else{

@@ -30,9 +30,8 @@ void customerScreen::on_pushButton_requestPamphlet_clicked()
 
    }
    else{
+       record.setHasRecieved(record.getUserIndex());
        QMessageBox::information(this,"Success","A pamphlet has been sent");
-      //write a function to store that the pamphlet is sent,
-      //this will become neccessary when new members are added formally
    }
    record.save();
 }

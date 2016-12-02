@@ -39,6 +39,7 @@ public:
     void setUserIndex(int inIndex);
     int getUserIndex();
     bool getHasRecieved(int index);
+    void setHasRecieved(int index);
 
 private:
     //parallel vectors hold relevant data
