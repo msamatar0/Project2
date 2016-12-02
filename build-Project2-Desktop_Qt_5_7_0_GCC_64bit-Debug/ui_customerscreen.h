@@ -32,6 +32,7 @@ public:
     QPushButton *pushButton_concept;
     QPushButton *pushButton_pitch;
     QPushButton *pushButton_help;
+    QPushButton *pushButton_back;
 
     void setupUi(QDialog *customerScreen)
     {
@@ -68,6 +69,9 @@ public:
         pushButton_help = new QPushButton(customerScreen);
         pushButton_help->setObjectName(QStringLiteral("pushButton_help"));
         pushButton_help->setGeometry(QRect(20, 10, 75, 23));
+        pushButton_back = new QPushButton(customerScreen);
+        pushButton_back->setObjectName(QStringLiteral("pushButton_back"));
+        pushButton_back->setGeometry(QRect(160, 290, 75, 23));
 
         retranslateUi(customerScreen);
 
@@ -87,6 +91,7 @@ public:
         pushButton_concept->setText(QApplication::translate("customerScreen", "How It Works", 0));
         pushButton_pitch->setText(QApplication::translate("customerScreen", "Our Product", 0));
         pushButton_help->setText(QApplication::translate("customerScreen", "Help", 0));
+        pushButton_back->setText(QApplication::translate("customerScreen", "Back", 0));
     } // retranslateUi
 
 };

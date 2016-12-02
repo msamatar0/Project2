@@ -23,6 +23,7 @@ class Ui_adminpanel
 {
 public:
     QPushButton *admin_pushButton_customers;
+    QPushButton *admin_pushButton_logout;
 
     void setupUi(QDialog *adminpanel)
     {
@@ -32,6 +33,9 @@ public:
         admin_pushButton_customers = new QPushButton(adminpanel);
         admin_pushButton_customers->setObjectName(QStringLiteral("admin_pushButton_customers"));
         admin_pushButton_customers->setGeometry(QRect(50, 50, 75, 23));
+        admin_pushButton_logout = new QPushButton(adminpanel);
+        admin_pushButton_logout->setObjectName(QStringLiteral("admin_pushButton_logout"));
+        admin_pushButton_logout->setGeometry(QRect(50, 250, 75, 23));
 
         retranslateUi(adminpanel);
 
@@ -41,7 +45,8 @@ public:
     void retranslateUi(QDialog *adminpanel)
     {
         adminpanel->setWindowTitle(QApplication::translate("adminpanel", "Dialog", 0));
-        admin_pushButton_customers->setText(QApplication::translate("adminpanel", "Customers", 0));
+        admin_pushButton_customers->setText(QApplication::translate("adminpanel", "Customer List", 0));
+        admin_pushButton_logout->setText(QApplication::translate("adminpanel", "Log Out", 0));
     } // retranslateUi
 
 };

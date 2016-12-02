@@ -23,6 +23,7 @@ SOURCES += main.cpp\
     ratingscreen.cpp \
     concept.cpp \
     salespitch.cpp \
+    help.cpp \
     newcustomer.cpp
 
 HEADERS  += mainwindow.h \
@@ -35,6 +36,7 @@ HEADERS  += mainwindow.h \
     ratingscreen.h \
     salespitch.h \
     concept.h \
+    help.h \
     newcustomer.h
 
 FORMS    += mainwindow.ui \
@@ -46,4 +48,5 @@ FORMS    += mainwindow.ui \
     ratingscreen.ui \
     concept.ui \
     salespitch.ui \
+    help.ui \
     newcustomer.ui

@@ -13,9 +13,12 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QRadioButton>
 #include <QtWidgets/QTableWidget>
 
 QT_BEGIN_NAMESPACE
@@ -25,12 +28,17 @@ class Ui_adminCustomerList
 public:
     QTableWidget *customerList_customerList;
     QPushButton *customerList_pushButton_back;
+    QGroupBox *groupBox;
+    QRadioButton *radioButton_yes;
+    QRadioButton *radioButton_no;
+    QComboBox *comboBox_customer;
+    QPushButton *pushButton;
 
     void setupUi(QDialog *adminCustomerList)
     {
         if (adminCustomerList->objectName().isEmpty())
             adminCustomerList->setObjectName(QStringLiteral("adminCustomerList"));
-        adminCustomerList->resize(785, 492);
+        adminCustomerList->resize(785, 601);
         customerList_customerList = new QTableWidget(adminCustomerList);
         if (customerList_customerList->columnCount() < 7)
             customerList_customerList->setColumnCount(7);
@@ -52,7 +60,22 @@ public:
         customerList_customerList->setGeometry(QRect(20, 20, 721, 400));
         customerList_pushButton_back = new QPushButton(adminCustomerList);
         customerList_pushButton_back->setObjectName(QStringLiteral("customerList_pushButton_back"));
-        customerList_pushButton_back->setGeometry(QRect(350, 440, 80, 22));
+        customerList_pushButton_back->setGeometry(QRect(630, 550, 80, 22));
+        groupBox = new QGroupBox(adminCustomerList);
+        groupBox->setObjectName(QStringLiteral("groupBox"));
+        groupBox->setGeometry(QRect(20, 460, 151, 91));
+        radioButton_yes = new QRadioButton(groupBox);
+        radioButton_yes->setObjectName(QStringLiteral("radioButton_yes"));
+        radioButton_yes->setGeometry(QRect(10, 30, 121, 20));
+        radioButton_no = new QRadioButton(groupBox);
+        radioButton_no->setObjectName(QStringLiteral("radioButton_no"));
+        radioButton_no->setGeometry(QRect(10, 60, 111, 20));
+        comboBox_customer = new QComboBox(adminCustomerList);
+        comboBox_customer->setObjectName(QStringLiteral("comboBox_customer"));
+        comboBox_customer->setGeometry(QRect(20, 430, 151, 22));
+        pushButton = new QPushButton(adminCustomerList);
+        pushButton->setObjectName(QStringLiteral("pushButton"));
+        pushButton->setGeometry(QRect(50, 560, 80, 22));
 
         retranslateUi(adminCustomerList);
 
@@ -77,6 +100,10 @@ public:
         QTableWidgetItem *___qtablewidgetitem6 = customerList_customerList->horizontalHeaderItem(6);
         ___qtablewidgetitem6->setText(QApplication::translate("adminCustomerList", "Received Pamphlet?", 0));
         customerList_pushButton_back->setText(QApplication::translate("adminCustomerList", "Back", 0));
+        groupBox->setTitle(QApplication::translate("adminCustomerList", "Key Customer?", 0));
+        radioButton_yes->setText(QApplication::translate("adminCustomerList", "Yes", 0));
+        radioButton_no->setText(QApplication::translate("adminCustomerList", "No", 0));
+        pushButton->setText(QApplication::translate("adminCustomerList", "Save", 0));
     } // retranslateUi
 
 };
