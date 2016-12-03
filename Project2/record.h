@@ -22,6 +22,7 @@ public:
     Record(QVector<QString>, QVector<QString>, QVector<QString>,
            QVector<QString>, QVector<QString>, QVector<bool>, QVector<bool>,
            QVector<QString>);
+    Record(const Record& obj);
     QVector<QString> getNameList() const;
     QVector<QString> getAddressList1() const;
     QVector<QString> getAddressList2() const;
@@ -35,12 +36,14 @@ public:
                      QString inStatus);
     bool checkName(QString inName);
     int findUserIndex(QString inName);
-    void save();
+    void save() const;
     void setUserIndex(int inIndex);
     int getUserIndex();
     bool getHasRecieved(int index);
     void setHasRecieved(int index);
     QString getAddress(int index);
+    friend std::ostream& operator<<(std::ostream& os, const Record& obj);
+
 
 private:
     //parallel vectors hold relevant data

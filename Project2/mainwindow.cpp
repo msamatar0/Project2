@@ -2,7 +2,7 @@
 #include "ui_mainwindow.h"
 #include "record.h"
 #include <QMessageBox>
-
+#include <iostream>
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -29,7 +29,8 @@ void MainWindow::on_login_pushButton_enter_clicked()
        userIndex = compareRec.findUserIndex(name);
        compareRec.setUserIndex(userIndex);
 
-       compareRec.save();
+       //compareRec.save();
+       std::cout << compareRec;
        qDebug() << "User is already in the database" << " Index is: " << userIndex << endl;
        qDebug() << "User is already in the database" << " Index is: " << userIndex << endl;
         QMessageBox::information(this,"Logged In","Welcome Back " + name + "!");

@@ -1,6 +1,7 @@
 #include "customerscreen.h"
 #include "ui_customerscreen.h"
 #include <QMessageBox>
+#include <iostream>
 
 customerScreen::customerScreen(QWidget *parent) :
     QDialog(parent),
@@ -33,7 +34,7 @@ void customerScreen::on_pushButton_requestPamphlet_clicked()
        record.setHasRecieved(record.getUserIndex());
        QMessageBox::information(this,"Success","A pamphlet has been sent");
    }
-   record.save();
+   std::cout << record;
 }
 
 void customerScreen::on_pushButton_concept_clicked()

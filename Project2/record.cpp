@@ -1,4 +1,5 @@
 #include "record.h"
+#include <iostream>
 Record::Record()
 
 {
@@ -67,7 +68,7 @@ Record::Record(QVector<QString> name, QVector<QString> address1, QVector<QString
 }
 
 
-void Record::save(){
+void Record::save() const{
     int index=0;
     QFile outputFile("../Resources/customerdata.txt");
 
@@ -131,10 +132,23 @@ void Record::addCustomer(QString inName, QString inAddressLine1,
     hasRecieved.push_back('n');
 
     //testemonials handled seperately
+}
+
+Record::Record(const Record& obj){
+    //saving the current record print data to file,
+    //new record will read this data from file (effectively copying the data to the
+    //new Record
+    std::cout << this;
 
 
 
 }
+std::ostream& operator<<(std::ostream& os, const Record& obj){
+    obj.save();
+  return os;
+}
+
+
 
 QVector<QString> Record::getNameList() const{
     return name;
@@ -189,9 +203,8 @@ void Record::setHasRecieved(int index){
 }
 
 QString Record::getAddress(int index){
-
     return (addressLine1[index] + "\n" + addressLine2[index]);
-
-
-
 }
+
+
+
