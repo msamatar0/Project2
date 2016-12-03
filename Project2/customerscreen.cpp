@@ -71,3 +71,10 @@ void customerScreen::on_pushButton_help_clicked()
    helpMe->show();
 
 }
+
+void customerScreen::on_pushButton_orderNow_clicked()
+{
+    form = new orderform(this);
+    form->show();
+
+}

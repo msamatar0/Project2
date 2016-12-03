@@ -40,6 +40,7 @@ public:
     int getUserIndex();
     bool getHasRecieved(int index);
     void setHasRecieved(int index);
+    QString getAddress(int index);
 
 private:
     //parallel vectors hold relevant data

@@ -187,3 +187,11 @@ bool Record::getHasRecieved(int index){
 void Record::setHasRecieved(int index){
    hasRecieved[index] = true;
 }
+
+QString Record::getAddress(int index){
+
+    return (addressLine1[index] + "\n" + addressLine2[index]);
+
+
+
+}

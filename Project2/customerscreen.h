@@ -8,6 +8,7 @@
 #include "concept.h"
 #include "salespitch.h"
 #include "help.h"
+#include "orderform.h"
 
 namespace Ui {
 class customerScreen;
@@ -36,6 +37,8 @@ private slots:
 
     void on_pushButton_help_clicked();
 
+    void on_pushButton_orderNow_clicked();
+
 private:
     help *helpMe;
     Record record;
@@ -44,6 +47,7 @@ private:
     ratingscreen *rate;
     concept *con;
     salespitch *pitch;
+    orderform *form;
 };
 
 #endif // CUSTOMERSCREEN_H

@@ -24,7 +24,8 @@ SOURCES += main.cpp\
     concept.cpp \
     salespitch.cpp \
     help.cpp \
-    newcustomer.cpp
+    newcustomer.cpp \
+    orderform.cpp
 
 HEADERS  += mainwindow.h \
     customerscreen.h \
@@ -37,7 +38,8 @@ HEADERS  += mainwindow.h \
     salespitch.h \
     concept.h \
     help.h \
-    newcustomer.h
+    newcustomer.h \
+    orderform.h
 
 FORMS    += mainwindow.ui \
     customerscreen.ui \
@@ -49,4 +51,5 @@ FORMS    += mainwindow.ui \
     concept.ui \
     salespitch.ui \
     help.ui \
-    newcustomer.ui
+    newcustomer.ui \
+    orderform.ui
