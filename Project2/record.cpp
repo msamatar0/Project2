@@ -135,14 +135,39 @@ void Record::addCustomer(QString inName, QString inAddressLine1,
 }
 
 Record::Record(const Record& obj){
-    //saving the current record print data to file,
-    //new record will read this data from file (effectively copying the data to the
-    //new Record
-    std::cout << this;
+   //save existing record first
+   std::cout << this;
 
-
+   userIndex = obj.userIndex;
+   name = obj.name;
+   addressLine1 = obj.addressLine1;
+   addressLine2 = obj.addressLine2;
+   interest = obj.interest;
+   status = obj.status;
+   isKey = obj.isKey;
+   hasRecieved = obj.hasRecieved;
+   testimonial = obj.testimonial;
 
 }
+
+Record &Record::operator=(const Record& obj){
+   //save current record first
+   std::cout << this;
+
+   userIndex = obj.userIndex;
+   name = obj.name;
+   addressLine1 = obj.addressLine1;
+   addressLine2 = obj.addressLine2;
+   interest = obj.interest;
+   status = obj.status;
+   isKey = obj.isKey;
+   hasRecieved = obj.hasRecieved;
+   testimonial = obj.testimonial;
+
+
+    return *this;
+}
+
 std::ostream& operator<<(std::ostream& os, const Record& obj){
     obj.save();
   return os;

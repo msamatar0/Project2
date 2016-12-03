@@ -43,6 +43,7 @@ public:
     void setHasRecieved(int index);
     QString getAddress(int index);
     friend std::ostream& operator<<(std::ostream& os, const Record& obj);
+    Record &operator=(const Record& obj);
 
 
 private:

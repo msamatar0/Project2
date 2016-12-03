@@ -19,6 +19,7 @@ void MainWindow::on_login_pushButton_enter_clicked()
 {
     QString name = ui->login_lineEdit_user->text();
     Record compareRec;
+
     //the location of the current user in the parallel vectors
     int userIndex;
     qDebug() << "Here is the name" << name << endl;
