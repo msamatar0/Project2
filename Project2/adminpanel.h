@@ -27,6 +27,8 @@ private slots:
 
     void on_admin_pushButton_deleteCustomer_clicked();
 
+    void on_admin_pushButton_keyCustomers_clicked();
+
 private:
     Ui::adminpanel *ui;
     adminCustomerList *customerListWindow;

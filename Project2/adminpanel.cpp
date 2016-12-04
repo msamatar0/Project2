@@ -39,3 +39,10 @@ void adminpanel::on_admin_pushButton_deleteCustomer_clicked()
     customerDelete->show();
     this->hide();
 }
+
+void adminpanel::on_admin_pushButton_keyCustomers_clicked()
+{
+    customerListWindow = new adminCustomerList(this, true);
+    this->hide();
+    customerListWindow->show();
+}

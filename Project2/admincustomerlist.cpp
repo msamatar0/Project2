@@ -27,6 +27,18 @@ adminCustomerList::adminCustomerList(QWidget *parent) :
     initOptionPanel();
 }
 
+adminCustomerList::adminCustomerList(QWidget *parent, bool keyOnly)
+    : QDialog(parent), ui(new Ui::adminCustomerList)
+{
+
+    ui->setupUi(this);
+
+    initRecord();
+    initKeyCustomerList();
+    initOptionPanel();
+
+}
+
 adminCustomerList::~adminCustomerList()
 {
     delete ui;
@@ -70,6 +82,42 @@ void adminCustomerList::initCustomerList() {
         ui->customerList_customerList->setItem(i, 5, new QTableWidgetItem(status.at(i) == "key" ? "Yes" : "No"));
         //ui->customerList_customerList->setItem(i, 6, new QTableWidgetItem(received.at(i)));
         ui->customerList_customerList->setItem(i, 6, new QTableWidgetItem(received.at(i)? "Yes" : "No"));
+
+    }
+
+    //ui->customerList_customerList->selectionBehavior(QAbstractItemView::NoSelection);
+}
+
+void adminCustomerList::initKeyCustomerList() {
+    //TODO - use a draw method to draw the table rather than all this in a init method
+
+    //drawCustomerList();
+
+    //prevent user from editting cells from the table view
+    ui->customerList_customerList->setSelectionBehavior(QAbstractItemView::SelectRows);
+
+    ui->customerList_customerList->setColumnCount(7);
+
+    QVector<int> keyIndecies;
+
+    for(int i = 0; i < names.length(); ++i) {
+        if(status.at(i) == "key") keyIndecies.push_back(i);
+    }
+
+    ui->customerList_customerList->setRowCount(keyIndecies.length());
+
+    for(int i = 0; i < keyIndecies.length(); ++i) {
+
+        ui->customerList_customerList->setItem(i, 0, new QTableWidgetItem(names.at(keyIndecies.at(i))));
+        ui->customerList_customerList->setItem(i, 1, new QTableWidgetItem(address1.at(keyIndecies.at(i))));
+        ui->customerList_customerList->setItem(i, 2, new QTableWidgetItem(address2.at(keyIndecies.at(i))));
+        ui->customerList_customerList->setItem(i, 3, new QTableWidgetItem(rating.at(keyIndecies.at(i))));
+        ui->customerList_customerList->setItem(i, 4, new QTableWidgetItem(status.at(keyIndecies.at(i))));
+
+        //When we have key/receieved working properly
+        ui->customerList_customerList->setItem(i, 5, new QTableWidgetItem(status.at((keyIndecies.at(i))) == "key" ? "Yes" : "No"));
+        //ui->customerList_customerList->setItem(i, 6, new QTableWidgetItem(received.at(i)));
+        ui->customerList_customerList->setItem(i, 6, new QTableWidgetItem(received.at((keyIndecies.at(i)))? "Yes" : "No"));
 
     }
 

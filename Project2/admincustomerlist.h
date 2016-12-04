@@ -16,6 +16,7 @@ class adminCustomerList : public QDialog
 
 public:
     explicit adminCustomerList(QWidget *parent = 0);
+    adminCustomerList(QWidget *parent, bool keyOnly);
     ~adminCustomerList();
 
 private slots:
@@ -31,6 +32,7 @@ private:
 
     Ui::adminCustomerList *ui;
     void initCustomerList();
+    void initKeyCustomerList();
     void initOptionPanel();
     void initRecord();
 
