@@ -27,6 +27,22 @@ void deleteCustomer::initList()
 void deleteCustomer::on_pushButton_clicked()
 {
 
+    Record *record = new Record();
+
+    QString name = ui->comboBox->currentText();
+
+    int index = record->getNameList().indexOf(name);
+
+    if(index != -1) {
+
+        record->remove(index);
+        record->save();
+
+        conf = new confirmationWindow(this, "Member Deleted!");
+        conf->show();
+
+    }
+
 }
 
 void deleteCustomer::on_comboBox_currentIndexChanged(const QString &arg1)
@@ -43,4 +59,10 @@ void deleteCustomer::on_comboBox_currentIndexChanged(const QString &arg1)
         ui->label_rating->setText(arg1.toUpper() + " is " + record->getInterestList().at(index).toUpper() + " in our product");
 
     }
+}
+
+void deleteCustomer::on_pushButton_2_clicked()
+{
+    this->parentWidget()->show();
+    this->close();
 }

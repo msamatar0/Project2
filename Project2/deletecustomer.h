@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "record.h"
+#include "confirmationwindow.h"
 
 namespace Ui {
 class deleteCustomer;
@@ -21,9 +22,12 @@ private slots:
 
     void on_comboBox_currentIndexChanged(const QString &arg1);
 
+    void on_pushButton_2_clicked();
+
 private:
     Ui::deleteCustomer *ui;
     void initList();
+    confirmationWindow *conf;
 };
 
 #endif // DELETECUSTOMER_H
