@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
+    <width>182</width>
     <height>300</height>
    </rect>
   </property>
@@ -16,9 +16,9 @@
   <widget class="QPushButton" name="admin_pushButton_customers">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>50</y>
-     <width>75</width>
+     <x>40</x>
+     <y>40</y>
+     <width>101</width>
      <height>23</height>
     </rect>
    </property>
@@ -29,14 +29,40 @@
   <widget class="QPushButton" name="admin_pushButton_logout">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>250</y>
+     <x>40</x>
+     <y>230</y>
      <width>75</width>
      <height>23</height>
     </rect>
    </property>
    <property name="text">
     <string>Log Out</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="admin_pushButton_addCustomer">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>80</y>
+     <width>101</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Add Customer</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="admin_pushButton_deleteCustomer">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>120</y>
+     <width>121</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Delete Customer</string>
    </property>
   </widget>
  </widget>

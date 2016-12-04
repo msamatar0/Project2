@@ -25,3 +25,10 @@ void adminpanel::on_admin_pushButton_logout_clicked()
     this->parentWidget()->show();
     this->close();
 }
+
+void adminpanel::on_admin_pushButton_addCustomer_clicked()
+{
+    customerAdd = new addCustomer(this);
+    customerAdd->show();
+    this->hide();
+}

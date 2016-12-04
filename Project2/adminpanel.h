@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "admincustomerlist.h"
+#include "addcustomer.h"
 
 namespace Ui {
 class adminpanel;
@@ -21,9 +22,13 @@ private slots:
 
     void on_admin_pushButton_logout_clicked();
 
+    void on_admin_pushButton_addCustomer_clicked();
+
 private:
     Ui::adminpanel *ui;
     adminCustomerList *customerListWindow;
+    addCustomer *customerAdd;
+
 };
 
 #endif // ADMINPANEL_H
