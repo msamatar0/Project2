@@ -49,12 +49,19 @@ Record::Record()
             //testimonials will be taken care of seperately, they are in a different file.
         }
     }
+    QFile testFile("../Resources/testimonials.txt");
+    if(testFile.open(QIODevice::ReadOnly)){
+        QTextStream fin(&testFile);
+        testimonial = fin.readAll();
 
+    }
+    qDebug() << "Test: "  << endl;
+    qDebug() << testimonial;
 }
 
 Record::Record(QVector<QString> name, QVector<QString> address1, QVector<QString> address2,
        QVector<QString> interest, QVector<QString> status, QVector<bool> key, QVector<bool> received,
-       QVector<QString> testimonial) {
+       QString testimonial) {
 
     this->name = name;
     addressLine1 = address1;
@@ -104,6 +111,11 @@ void Record::save() const{
                 fout << endl;
 
         }
+    }
+    QFile testFile("../Resources/testimonials.txt");
+    if(testFile.open(QIODevice::WriteOnly)){
+        QTextStream fout (&testFile);
+        fout << testimonial;
     }
 
 }
@@ -203,13 +215,13 @@ QVector<bool> Record::getRecievedList() const{
     return hasRecieved;
 }
 
-QVector<QString> Record::getTestimonial() const{
+QString Record::getTestimonial() const{
     return testimonial;
 }
-bool Record::checkName(QString inName){
+bool Record::checkName(QString inName) const{
     return (this->name.contains(inName));
 }
-int Record::findUserIndex(QString inName){
+int Record::findUserIndex(QString inName) const{
     return (this->name.indexOf(inName));
 
 }
@@ -217,10 +229,10 @@ void Record::setUserIndex(int inIndex){
    userIndex = inIndex;
 }
 
-int Record::getUserIndex(){
+int Record::getUserIndex() const{
     return userIndex;
 }
-bool Record::getHasRecieved(int index){
+bool Record::getHasRecieved(int index) const{
     return (hasRecieved[index]);
 }
 void Record::setHasRecieved(int index){

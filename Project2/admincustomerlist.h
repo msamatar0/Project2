@@ -35,7 +35,7 @@ private:
     QVector<QString> status;
     QVector<bool> key;
     QVector<bool> received;
-    QVector<QString> testimonial;
+    QString testimonial;
 
 };
 

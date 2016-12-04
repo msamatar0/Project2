@@ -755,6 +755,7 @@ moc_mainwindow.cpp: /home/jake/Qt/5.7/gcc_64/include/QtWidgets/QMainWindow \
 		../Project2/salespitch.h \
 		../Project2/help.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QWidget \
+		../Project2/orderform.h \
 		../Project2/adminlogin.h \
 		../Project2/adminpanel.h \
 		../Project2/admincustomerlist.h \
@@ -892,6 +893,7 @@ moc_customerscreen.cpp: /home/jake/Qt/5.7/gcc_64/include/QtWidgets/QDialog \
 		../Project2/salespitch.h \
 		../Project2/help.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QWidget \
+		../Project2/orderform.h \
 		../Project2/customerscreen.h \
 		/home/jake/Qt/5.7/gcc_64/bin/moc
 	/home/jake/Qt/5.7/gcc_64/bin/moc $(DEFINES) -I/home/jake/Qt/5.7/gcc_64/mkspecs/linux-g++ -I/home/jake/cs1c/iRobots/one/Project2/Project2 -I/home/jake/Qt/5.7/gcc_64/include -I/home/jake/Qt/5.7/gcc_64/include/QtWidgets -I/home/jake/Qt/5.7/gcc_64/include/QtGui -I/home/jake/Qt/5.7/gcc_64/include/QtCore -I. -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Project2/customerscreen.h -o moc_customerscreen.cpp
@@ -1977,6 +1979,12 @@ moc_orderform.cpp: /home/jake/Qt/5.7/gcc_64/include/QtWidgets/QDialog \
 		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfiledevice.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
+		../Project2/record.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVector \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QString \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QFile \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QTextStream \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QDebug \
 		../Project2/orderform.h \
 		/home/jake/Qt/5.7/gcc_64/bin/moc
 	/home/jake/Qt/5.7/gcc_64/bin/moc $(DEFINES) -I/home/jake/Qt/5.7/gcc_64/mkspecs/linux-g++ -I/home/jake/cs1c/iRobots/one/Project2/Project2 -I/home/jake/Qt/5.7/gcc_64/include -I/home/jake/Qt/5.7/gcc_64/include/QtWidgets -I/home/jake/Qt/5.7/gcc_64/include/QtGui -I/home/jake/Qt/5.7/gcc_64/include/QtCore -I. -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Project2/orderform.h -o moc_orderform.cpp
@@ -2163,6 +2171,7 @@ main.o: ../Project2/main.cpp ../Project2/mainwindow.h \
 		../Project2/salespitch.h \
 		../Project2/help.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QWidget \
+		../Project2/orderform.h \
 		../Project2/adminlogin.h \
 		../Project2/adminpanel.h \
 		../Project2/admincustomerlist.h \
@@ -2311,6 +2320,7 @@ mainwindow.o: ../Project2/mainwindow.cpp ../Project2/mainwindow.h \
 		../Project2/salespitch.h \
 		../Project2/help.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QWidget \
+		../Project2/orderform.h \
 		../Project2/adminlogin.h \
 		../Project2/adminpanel.h \
 		../Project2/admincustomerlist.h \
@@ -2332,36 +2342,6 @@ mainwindow.o: ../Project2/mainwindow.cpp ../Project2/mainwindow.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabbar.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qrubberband.h \
 		ui_mainwindow.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVariant \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QAction \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qaction.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qactiongroup.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QApplication \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qapplication.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreapplication.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qeventloop.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qdesktopwidget.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qguiapplication.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qinputmethod.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QButtonGroup \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qbuttongroup.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QHeaderView \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qheaderview.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QLineEdit \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qlineedit.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtextcursor.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtextformat.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpen.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtextoption.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QMenu \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qmenu.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QMenuBar \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qmenubar.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QPushButton \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractbutton.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QStatusBar \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstatusbar.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QMessageBox \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qmessagebox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../Project2/mainwindow.cpp
@@ -2480,41 +2460,8 @@ customerscreen.o: ../Project2/customerscreen.cpp ../Project2/customerscreen.h \
 		../Project2/salespitch.h \
 		../Project2/help.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QWidget \
+		../Project2/orderform.h \
 		ui_customerscreen.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVariant \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QAction \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qaction.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qicon.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qactiongroup.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QApplication \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qapplication.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreapplication.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qeventloop.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qdesktopwidget.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qguiapplication.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qinputmethod.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QButtonGroup \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qbuttongroup.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QHeaderView \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qheaderview.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractitemview.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qabstractitemmodel.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qitemselectionmodel.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstyleoption.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractspinbox.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvalidator.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qregularexpression.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qslider.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractslider.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstyle.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabbar.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qrubberband.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QPushButton \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractbutton.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QMessageBox \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qmessagebox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o customerscreen.o ../Project2/customerscreen.cpp
@@ -2639,25 +2586,7 @@ adminpanel.o: ../Project2/adminpanel.cpp ../Project2/adminpanel.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabbar.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qrubberband.h \
-		ui_adminpanel.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVariant \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QAction \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qaction.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qactiongroup.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QApplication \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qapplication.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreapplication.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qeventloop.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qdesktopwidget.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qguiapplication.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qinputmethod.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QButtonGroup \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qbuttongroup.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QHeaderView \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qheaderview.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QPushButton \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractbutton.h
+		ui_adminpanel.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o adminpanel.o ../Project2/adminpanel.cpp
 
 adminlogin.o: ../Project2/adminlogin.cpp ../Project2/adminlogin.h \
@@ -2784,33 +2713,7 @@ adminlogin.o: ../Project2/adminlogin.cpp ../Project2/adminlogin.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QMessageBox \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qmessagebox.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtCore/QDebug \
-		ui_adminlogin.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVariant \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QAction \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qaction.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qactiongroup.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QApplication \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qapplication.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreapplication.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qeventloop.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qdesktopwidget.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qguiapplication.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qinputmethod.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QButtonGroup \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qbuttongroup.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QHeaderView \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qheaderview.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QLabel \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qlabel.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QLineEdit \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qlineedit.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtextcursor.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtextformat.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpen.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtextoption.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QPushButton \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractbutton.h
+		ui_adminlogin.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o adminlogin.o ../Project2/adminlogin.cpp
 
 record.o: ../Project2/record.cpp ../Project2/record.h \
@@ -3004,30 +2907,6 @@ admincustomerlist.o: ../Project2/admincustomerlist.cpp ../Project2/admincustomer
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qrubberband.h \
 		ui_admincustomerlist.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVariant \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QAction \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qaction.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qactiongroup.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QApplication \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qapplication.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreapplication.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qeventloop.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qdesktopwidget.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qguiapplication.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qinputmethod.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QButtonGroup \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qbuttongroup.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QComboBox \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qcombobox.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QGroupBox \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qgroupbox.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QHeaderView \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qheaderview.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QPushButton \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractbutton.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QRadioButton \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qradiobutton.h \
 		../Project2/record.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVector \
 		/home/jake/Qt/5.7/gcc_64/include/QtCore/QString \
@@ -3138,48 +3017,7 @@ productview.o: ../Project2/productview.cpp ../Project2/productview.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QLabel \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qlabel.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qframe.h \
-		ui_productview.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVariant \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QAction \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qaction.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qicon.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qactiongroup.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QApplication \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qapplication.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreapplication.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qeventloop.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qdesktopwidget.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qguiapplication.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qinputmethod.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QButtonGroup \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qbuttongroup.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QHeaderView \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qheaderview.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractitemview.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qabstractitemmodel.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qitemselectionmodel.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstyleoption.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractspinbox.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvalidator.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qregularexpression.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qslider.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractslider.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstyle.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabbar.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qrubberband.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QPushButton \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractbutton.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QTextEdit \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtextedit.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtextdocument.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtextoption.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtextcursor.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtextformat.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpen.h
+		ui_productview.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o productview.o ../Project2/productview.cpp
 
 ratingscreen.o: ../Project2/ratingscreen.cpp ../Project2/ratingscreen.h \
@@ -3281,46 +3119,7 @@ ratingscreen.o: ../Project2/ratingscreen.cpp ../Project2/ratingscreen.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfiledevice.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
-		ui_ratingscreen.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVariant \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QAction \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qaction.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qicon.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qactiongroup.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QApplication \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qapplication.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreapplication.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qeventloop.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qdesktopwidget.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qguiapplication.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qinputmethod.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QButtonGroup \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qbuttongroup.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QComboBox \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qcombobox.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstyleoption.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractspinbox.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvalidator.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qregularexpression.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qslider.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractslider.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstyle.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabbar.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qrubberband.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qframe.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qabstractitemmodel.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QHeaderView \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qheaderview.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractitemview.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qitemselectionmodel.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QLabel \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qlabel.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QPushButton \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractbutton.h
+		ui_ratingscreen.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o ratingscreen.o ../Project2/ratingscreen.cpp
 
 concept.o: ../Project2/concept.cpp ../Project2/concept.h \
@@ -3422,44 +3221,7 @@ concept.o: ../Project2/concept.cpp ../Project2/concept.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfiledevice.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
-		ui_concept.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVariant \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QAction \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qaction.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qicon.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qactiongroup.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QApplication \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qapplication.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreapplication.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qeventloop.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qdesktopwidget.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qguiapplication.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qinputmethod.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QButtonGroup \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qbuttongroup.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QHeaderView \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qheaderview.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractitemview.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qframe.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qabstractitemmodel.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qitemselectionmodel.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstyleoption.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractspinbox.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvalidator.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qregularexpression.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qslider.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractslider.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstyle.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabbar.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qrubberband.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QLabel \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qlabel.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QPushButton \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractbutton.h
+		ui_concept.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o concept.o ../Project2/concept.cpp
 
 salespitch.o: ../Project2/salespitch.cpp ../Project2/salespitch.h \
@@ -3561,44 +3323,7 @@ salespitch.o: ../Project2/salespitch.cpp ../Project2/salespitch.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfiledevice.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
-		ui_salespitch.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVariant \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QAction \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qaction.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qicon.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qactiongroup.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QApplication \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qapplication.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreapplication.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qeventloop.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qdesktopwidget.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qguiapplication.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qinputmethod.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QButtonGroup \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qbuttongroup.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QHeaderView \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qheaderview.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractitemview.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qframe.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qabstractitemmodel.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qitemselectionmodel.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstyleoption.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractspinbox.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvalidator.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qregularexpression.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qslider.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractslider.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstyle.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabbar.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qrubberband.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QLabel \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qlabel.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QPushButton \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractbutton.h
+		ui_salespitch.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o salespitch.o ../Project2/salespitch.cpp
 
 help.o: ../Project2/help.cpp ../Project2/help.h \
@@ -3699,51 +3424,7 @@ help.o: ../Project2/help.cpp ../Project2/help.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfiledevice.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
-		ui_help.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVariant \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QAction \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qaction.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qicon.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qactiongroup.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QApplication \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qapplication.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreapplication.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qeventloop.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qdesktopwidget.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qguiapplication.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qinputmethod.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QButtonGroup \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qbuttongroup.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QHeaderView \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qheaderview.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractitemview.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qframe.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qabstractitemmodel.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qitemselectionmodel.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstyleoption.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractspinbox.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvalidator.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qregularexpression.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qslider.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractslider.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstyle.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabbar.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qrubberband.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QLabel \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qlabel.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QPushButton \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractbutton.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QTextEdit \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtextedit.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtextdocument.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtextoption.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtextcursor.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtextformat.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpen.h
+		ui_help.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o help.o ../Project2/help.cpp
 
 newcustomer.o: ../Project2/newcustomer.cpp ../Project2/newcustomer.h \
@@ -3845,50 +3526,7 @@ newcustomer.o: ../Project2/newcustomer.cpp ../Project2/newcustomer.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfiledevice.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
-		ui_newcustomer.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVariant \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QAction \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qaction.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qicon.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qactiongroup.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QApplication \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qapplication.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreapplication.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qeventloop.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qdesktopwidget.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qguiapplication.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qinputmethod.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QButtonGroup \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qbuttongroup.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QCheckBox \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qcheckbox.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractbutton.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QHeaderView \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qheaderview.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractitemview.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qframe.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qabstractitemmodel.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qitemselectionmodel.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstyleoption.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractspinbox.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvalidator.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/qregularexpression.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qslider.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractslider.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstyle.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabbar.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qrubberband.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QLineEdit \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qlineedit.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtextcursor.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtextformat.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpen.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtextoption.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QPushButton \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qpushbutton.h
+		ui_newcustomer.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o newcustomer.o ../Project2/newcustomer.cpp
 
 orderform.o: ../Project2/orderform.cpp ../Project2/orderform.h \
@@ -3990,7 +3628,15 @@ orderform.o: ../Project2/orderform.cpp ../Project2/orderform.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfiledevice.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
-		ui_orderform.h
+		../Project2/record.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVector \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QString \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QFile \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QTextStream \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QDebug \
+		ui_orderform.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QMessageBox \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qmessagebox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o orderform.o ../Project2/orderform.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
