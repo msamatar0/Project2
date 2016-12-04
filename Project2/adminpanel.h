@@ -4,6 +4,7 @@
 #include <QDialog>
 #include "admincustomerlist.h"
 #include "addcustomer.h"
+#include "deletecustomer.h"
 
 namespace Ui {
 class adminpanel;
@@ -24,10 +25,13 @@ private slots:
 
     void on_admin_pushButton_addCustomer_clicked();
 
+    void on_admin_pushButton_deleteCustomer_clicked();
+
 private:
     Ui::adminpanel *ui;
     adminCustomerList *customerListWindow;
     addCustomer *customerAdd;
+    deleteCustomer *customerDelete;
 
 };
 

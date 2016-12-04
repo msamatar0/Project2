@@ -6,9 +6,41 @@ deleteCustomer::deleteCustomer(QWidget *parent) :
     ui(new Ui::deleteCustomer)
 {
     ui->setupUi(this);
+
+    initList();
 }
 
 deleteCustomer::~deleteCustomer()
 {
     delete ui;
+}
+
+void deleteCustomer::initList()
+{
+    Record *record = new Record();
+
+    QVector<QString> names = record->getNameList();
+
+    ui->comboBox->addItems(names.toList());
+}
+
+void deleteCustomer::on_pushButton_clicked()
+{
+
+}
+
+void deleteCustomer::on_comboBox_currentIndexChanged(const QString &arg1)
+{
+    Record *record = new Record();
+
+    int index = record->getNameList().indexOf(arg1);
+
+    if(index != -1) {
+
+        ui->label_address1->setText(record->getAddressList1().at(index));
+        ui->label_address2->setText(record->getAddressList2().at(index));
+        ui->label_key->setText(arg1.toUpper() + " is a " + record->getStatusList().at(index).toUpper() + " customer");
+        ui->label_rating->setText(arg1.toUpper() + " is " + record->getInterestList().at(index).toUpper() + " in our product");
+
+    }
 }

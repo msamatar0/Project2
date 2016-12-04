@@ -32,3 +32,10 @@ void adminpanel::on_admin_pushButton_addCustomer_clicked()
     customerAdd->show();
     this->hide();
 }
+
+void adminpanel::on_admin_pushButton_deleteCustomer_clicked()
+{
+    customerDelete = new deleteCustomer(this);
+    customerDelete->show();
+    this->hide();
+}

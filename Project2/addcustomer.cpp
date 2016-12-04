@@ -50,6 +50,7 @@ void addCustomer::on_pushButton_add_clicked()
             QString name = ui->lineEdit_name->text();
             QString address1 = ui->lineEdit_address1->text();
             QString address2 = ui->lineEdit_address2->text();
+            QString rating = ui->comboBox_rating->currentText();
             bool isKey = ui->checkBox_key->isChecked();
             bool received = ui->checkBox_pamphlet->isChecked();
 
@@ -61,7 +62,7 @@ void addCustomer::on_pushButton_add_clicked()
 
             record = new Record();
 
-            record->addCustomer(name, address1, address2, "somewhat interested", (isKey? "key" : "nice to have"));
+            record->addCustomer(name, address1, address2, rating, (isKey? "key" : "nice to have"));
 
             record->save();
 

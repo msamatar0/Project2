@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>272</width>
-    <height>293</height>
+    <height>345</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,7 +17,7 @@
    <property name="geometry">
     <rect>
      <x>60</x>
-     <y>50</y>
+     <y>30</y>
      <width>161</width>
      <height>22</height>
     </rect>
@@ -27,7 +27,7 @@
    <property name="geometry">
     <rect>
      <x>60</x>
-     <y>95</y>
+     <y>75</y>
      <width>161</width>
      <height>22</height>
     </rect>
@@ -37,7 +37,7 @@
    <property name="geometry">
     <rect>
      <x>60</x>
-     <y>140</y>
+     <y>120</y>
      <width>161</width>
      <height>22</height>
     </rect>
@@ -47,7 +47,7 @@
    <property name="geometry">
     <rect>
      <x>80</x>
-     <y>170</y>
+     <y>210</y>
      <width>111</width>
      <height>20</height>
     </rect>
@@ -60,7 +60,7 @@
    <property name="geometry">
     <rect>
      <x>80</x>
-     <y>190</y>
+     <y>230</y>
      <width>131</width>
      <height>20</height>
     </rect>
@@ -73,7 +73,7 @@
    <property name="geometry">
     <rect>
      <x>90</x>
-     <y>220</y>
+     <y>260</y>
      <width>80</width>
      <height>22</height>
     </rect>
@@ -86,7 +86,7 @@
    <property name="geometry">
     <rect>
      <x>90</x>
-     <y>250</y>
+     <y>290</y>
      <width>80</width>
      <height>22</height>
     </rect>
@@ -99,7 +99,7 @@
    <property name="geometry">
     <rect>
      <x>90</x>
-     <y>30</y>
+     <y>10</y>
      <width>101</width>
      <height>16</height>
     </rect>
@@ -112,7 +112,7 @@
    <property name="geometry">
     <rect>
      <x>90</x>
-     <y>80</y>
+     <y>60</y>
      <width>101</width>
      <height>16</height>
     </rect>
@@ -125,13 +125,56 @@
    <property name="geometry">
     <rect>
      <x>90</x>
-     <y>120</y>
+     <y>100</y>
      <width>101</width>
      <height>16</height>
     </rect>
    </property>
    <property name="text">
     <string>City, State, ZIP</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox_rating">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>170</y>
+     <width>161</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>very interested</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>somewhat interested</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>not interested</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>never call me again</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>150</y>
+     <width>59</width>
+     <height>14</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Rating&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
  </widget>
