@@ -4,6 +4,7 @@
 #include <QDialog>
 
 #include <QTableWidget>
+#include "addcustomer.h"
 
 namespace Ui {
 class adminCustomerList;
@@ -22,7 +23,12 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_pushButton_editInfo_clicked();
+
 private:
+    addCustomer* editCustomer;
+    confirmationWindow *conf;
+
     Ui::adminCustomerList *ui;
     void initCustomerList();
     void initOptionPanel();

@@ -72,6 +72,8 @@ void adminCustomerList::initCustomerList() {
         ui->customerList_customerList->setItem(i, 6, new QTableWidgetItem(received.at(i)? "Yes" : "No"));
 
     }
+
+    //ui->customerList_customerList->selectionBehavior(QAbstractItemView::NoSelection);
 }
 
 void adminCustomerList::on_customerList_pushButton_back_clicked()
@@ -114,4 +116,11 @@ void adminCustomerList::on_pushButton_clicked()
         this->initCustomerList();
     }
 
+}
+
+void adminCustomerList::on_pushButton_editInfo_clicked()
+{
+    editCustomer = new addCustomer(this, ui->comboBox_customer->currentText(), true);
+    editCustomer->show();
+    this->hide();
 }

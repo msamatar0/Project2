@@ -138,13 +138,27 @@ void Record::addCustomer(QString inName, QString inAddressLine1,
     interest.push_back(inInterest);
 
     //if is key, push back true, else false
-    isKey.push_back(inStatus=="key");
+    if(inInterest == "key") isKey.push_back(inStatus=="key");
+    else isKey.push_back("nice to have");
 
     //new members have not recieved the pamphlet (by default)
     hasRecieved.push_back('n');
 
     //testemonials handled seperately
 }
+
+void Record::remove(int index) {
+
+    name.remove(index);
+    addressLine1.remove(index);
+    addressLine2.remove(index);
+    interest.remove(index);
+    status.remove(index);
+    isKey.remove(index);
+    hasRecieved.remove(index);
+
+}
+
 
 Record::Record(const Record& obj){
    //save existing record first

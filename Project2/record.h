@@ -62,8 +62,7 @@ public:
     QVector<bool> getRecievedList() const;
     /**
      * returns the string of testimonials
-     */
-    QString getTestimonial() const;
+     */    QString getTestimonial() const;
     /**
      * adds a customer with properties pased in as paramters
      */
@@ -98,6 +97,10 @@ public:
      * sets the indexed customer's "hasRecieved" field to true
      */
     void setHasRecieved(int index);
+    /**
+     * removes all info at given index
+     */
+    void remove(int index);
     /**
      * returns both lines of the address
      */
