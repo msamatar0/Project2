@@ -29,7 +29,10 @@ SOURCES += main.cpp\
     addcustomer.cpp \
     confirmationwindow.cpp \
     errorwindow.cpp \
-    deletecustomer.cpp
+    deletecustomer.cpp \
+    person.cpp \
+    admin.cpp \
+    customer.cpp
 
 HEADERS  += mainwindow.h \
     customerscreen.h \
@@ -47,7 +50,10 @@ HEADERS  += mainwindow.h \
     addcustomer.h \
     confirmationwindow.h \
     errorwindow.h \
-    deletecustomer.h
+    deletecustomer.h \
+    admin.h \
+    customer.h \
+    person.h
 
 FORMS    += mainwindow.ui \
     customerscreen.ui \

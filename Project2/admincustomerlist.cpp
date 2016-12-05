@@ -168,7 +168,7 @@ void adminCustomerList::on_pushButton_clicked()
 
 void adminCustomerList::on_pushButton_editInfo_clicked()
 {
-    editCustomer = new addCustomer(this, ui->comboBox_customer->currentText(), true);
+    editCustomer = new addCustomer(this, ui->comboBox_customer->currentText());
     editCustomer->show();
     this->hide();
 }

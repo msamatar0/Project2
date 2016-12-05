@@ -14,6 +14,9 @@ class customer : public person {
     bool hasRecieved;
 
   public:
+    /**
+     * @brief print - overloaded from pure virtual method, prints customer info
+     */
     void print();
 
 };

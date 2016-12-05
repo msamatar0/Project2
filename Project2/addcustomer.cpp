@@ -10,7 +10,7 @@ addCustomer::addCustomer(QWidget *parent) :
     ui->setupUi(this);
 }
 
-addCustomer::addCustomer(QWidget *parent, QString member, bool editMode) :
+addCustomer::addCustomer(QWidget *parent, QString member) :
     QDialog(parent),
     ui(new Ui::addCustomer)
 {
