@@ -61,7 +61,16 @@ SOURCES       = ../Project2/main.cpp \
 		../Project2/salespitch.cpp \
 		../Project2/help.cpp \
 		../Project2/newcustomer.cpp \
-		../Project2/orderform.cpp moc_mainwindow.cpp \
+		../Project2/orderform.cpp \
+		../Project2/addcustomer.cpp \
+		../Project2/confirmationwindow.cpp \
+		../Project2/errorwindow.cpp \
+		../Project2/deletecustomer.cpp \
+		../Project2/person.cpp \
+		../Project2/admin.cpp \
+		../Project2/customer.cpp \
+		../Project2/contact.cpp \
+		../Project2/testimonials.cpp moc_mainwindow.cpp \
 		moc_customerscreen.cpp \
 		moc_adminpanel.cpp \
 		moc_adminlogin.cpp \
@@ -72,7 +81,13 @@ SOURCES       = ../Project2/main.cpp \
 		moc_concept.cpp \
 		moc_help.cpp \
 		moc_newcustomer.cpp \
-		moc_orderform.cpp
+		moc_orderform.cpp \
+		moc_addcustomer.cpp \
+		moc_confirmationwindow.cpp \
+		moc_errorwindow.cpp \
+		moc_deletecustomer.cpp \
+		moc_contact.cpp \
+		moc_testimonials.cpp
 OBJECTS       = main.o \
 		mainwindow.o \
 		customerscreen.o \
@@ -87,6 +102,15 @@ OBJECTS       = main.o \
 		help.o \
 		newcustomer.o \
 		orderform.o \
+		addcustomer.o \
+		confirmationwindow.o \
+		errorwindow.o \
+		deletecustomer.o \
+		person.o \
+		admin.o \
+		customer.o \
+		contact.o \
+		testimonials.o \
 		moc_mainwindow.o \
 		moc_customerscreen.o \
 		moc_adminpanel.o \
@@ -98,7 +122,13 @@ OBJECTS       = main.o \
 		moc_concept.o \
 		moc_help.o \
 		moc_newcustomer.o \
-		moc_orderform.o
+		moc_orderform.o \
+		moc_addcustomer.o \
+		moc_confirmationwindow.o \
+		moc_errorwindow.o \
+		moc_deletecustomer.o \
+		moc_contact.o \
+		moc_testimonials.o
 DIST          = /home/jake/Qt/5.7/gcc_64/mkspecs/features/spec_pre.prf \
 		/home/jake/Qt/5.7/gcc_64/mkspecs/common/unix.conf \
 		/home/jake/Qt/5.7/gcc_64/mkspecs/common/linux.conf \
@@ -260,7 +290,16 @@ DIST          = /home/jake/Qt/5.7/gcc_64/mkspecs/features/spec_pre.prf \
 		../Project2/concept.h \
 		../Project2/help.h \
 		../Project2/newcustomer.h \
-		../Project2/orderform.h ../Project2/main.cpp \
+		../Project2/orderform.h \
+		../Project2/addcustomer.h \
+		../Project2/confirmationwindow.h \
+		../Project2/errorwindow.h \
+		../Project2/deletecustomer.h \
+		../Project2/admin.h \
+		../Project2/customer.h \
+		../Project2/person.h \
+		../Project2/contact.h \
+		../Project2/testimonials.h ../Project2/main.cpp \
 		../Project2/mainwindow.cpp \
 		../Project2/customerscreen.cpp \
 		../Project2/adminpanel.cpp \
@@ -273,7 +312,16 @@ DIST          = /home/jake/Qt/5.7/gcc_64/mkspecs/features/spec_pre.prf \
 		../Project2/salespitch.cpp \
 		../Project2/help.cpp \
 		../Project2/newcustomer.cpp \
-		../Project2/orderform.cpp
+		../Project2/orderform.cpp \
+		../Project2/addcustomer.cpp \
+		../Project2/confirmationwindow.cpp \
+		../Project2/errorwindow.cpp \
+		../Project2/deletecustomer.cpp \
+		../Project2/person.cpp \
+		../Project2/admin.cpp \
+		../Project2/customer.cpp \
+		../Project2/contact.cpp \
+		../Project2/testimonials.cpp
 QMAKE_TARGET  = Project2
 DESTDIR       = 
 TARGET        = Project2
@@ -282,7 +330,7 @@ TARGET        = Project2
 first: all
 ####### Build rules
 
-$(TARGET): ui_mainwindow.h ui_customerscreen.h ui_adminpanel.h ui_adminlogin.h ui_admincustomerlist.h ui_productview.h ui_ratingscreen.h ui_concept.h ui_salespitch.h ui_help.h ui_newcustomer.h ui_orderform.h $(OBJECTS)  
+$(TARGET): ui_mainwindow.h ui_customerscreen.h ui_adminpanel.h ui_adminlogin.h ui_admincustomerlist.h ui_productview.h ui_ratingscreen.h ui_concept.h ui_salespitch.h ui_help.h ui_newcustomer.h ui_orderform.h ui_addcustomer.h ui_confirmationwindow.h ui_errorwindow.h ui_deletecustomer.h ui_contact.h ui_testimonials.h $(OBJECTS)  
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
 
 Makefile: ../Project2/Project2.pro /home/jake/Qt/5.7/gcc_64/mkspecs/linux-g++/qmake.conf /home/jake/Qt/5.7/gcc_64/mkspecs/features/spec_pre.prf \
@@ -606,9 +654,9 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents ../Project2/mainwindow.h ../Project2/customerscreen.h ../Project2/adminpanel.h ../Project2/adminlogin.h ../Project2/record.h ../Project2/admincustomerlist.h ../Project2/productview.h ../Project2/ratingscreen.h ../Project2/salespitch.h ../Project2/concept.h ../Project2/help.h ../Project2/newcustomer.h ../Project2/orderform.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../Project2/main.cpp ../Project2/mainwindow.cpp ../Project2/customerscreen.cpp ../Project2/adminpanel.cpp ../Project2/adminlogin.cpp ../Project2/record.cpp ../Project2/admincustomerlist.cpp ../Project2/productview.cpp ../Project2/ratingscreen.cpp ../Project2/concept.cpp ../Project2/salespitch.cpp ../Project2/help.cpp ../Project2/newcustomer.cpp ../Project2/orderform.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../Project2/mainwindow.ui ../Project2/customerscreen.ui ../Project2/adminpanel.ui ../Project2/adminlogin.ui ../Project2/admincustomerlist.ui ../Project2/productview.ui ../Project2/ratingscreen.ui ../Project2/concept.ui ../Project2/salespitch.ui ../Project2/help.ui ../Project2/newcustomer.ui ../Project2/orderform.ui $(DISTDIR)/
+	$(COPY_FILE) --parents ../Project2/mainwindow.h ../Project2/customerscreen.h ../Project2/adminpanel.h ../Project2/adminlogin.h ../Project2/record.h ../Project2/admincustomerlist.h ../Project2/productview.h ../Project2/ratingscreen.h ../Project2/salespitch.h ../Project2/concept.h ../Project2/help.h ../Project2/newcustomer.h ../Project2/orderform.h ../Project2/addcustomer.h ../Project2/confirmationwindow.h ../Project2/errorwindow.h ../Project2/deletecustomer.h ../Project2/admin.h ../Project2/customer.h ../Project2/person.h ../Project2/contact.h ../Project2/testimonials.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../Project2/main.cpp ../Project2/mainwindow.cpp ../Project2/customerscreen.cpp ../Project2/adminpanel.cpp ../Project2/adminlogin.cpp ../Project2/record.cpp ../Project2/admincustomerlist.cpp ../Project2/productview.cpp ../Project2/ratingscreen.cpp ../Project2/concept.cpp ../Project2/salespitch.cpp ../Project2/help.cpp ../Project2/newcustomer.cpp ../Project2/orderform.cpp ../Project2/addcustomer.cpp ../Project2/confirmationwindow.cpp ../Project2/errorwindow.cpp ../Project2/deletecustomer.cpp ../Project2/person.cpp ../Project2/admin.cpp ../Project2/customer.cpp ../Project2/contact.cpp ../Project2/testimonials.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../Project2/mainwindow.ui ../Project2/customerscreen.ui ../Project2/adminpanel.ui ../Project2/adminlogin.ui ../Project2/admincustomerlist.ui ../Project2/productview.ui ../Project2/ratingscreen.ui ../Project2/concept.ui ../Project2/salespitch.ui ../Project2/help.ui ../Project2/newcustomer.ui ../Project2/orderform.ui ../Project2/addcustomer.ui ../Project2/confirmationwindow.ui ../Project2/errorwindow.ui ../Project2/deletecustomer.ui ../Project2/contact.ui ../Project2/testimonials.ui $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -634,9 +682,9 @@ benchmark: first
 
 compiler_rcc_make_all:
 compiler_rcc_clean:
-compiler_moc_header_make_all: moc_mainwindow.cpp moc_customerscreen.cpp moc_adminpanel.cpp moc_adminlogin.cpp moc_admincustomerlist.cpp moc_productview.cpp moc_ratingscreen.cpp moc_salespitch.cpp moc_concept.cpp moc_help.cpp moc_newcustomer.cpp moc_orderform.cpp
+compiler_moc_header_make_all: moc_mainwindow.cpp moc_customerscreen.cpp moc_adminpanel.cpp moc_adminlogin.cpp moc_admincustomerlist.cpp moc_productview.cpp moc_ratingscreen.cpp moc_salespitch.cpp moc_concept.cpp moc_help.cpp moc_newcustomer.cpp moc_orderform.cpp moc_addcustomer.cpp moc_confirmationwindow.cpp moc_errorwindow.cpp moc_deletecustomer.cpp moc_contact.cpp moc_testimonials.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_mainwindow.cpp moc_customerscreen.cpp moc_adminpanel.cpp moc_adminlogin.cpp moc_admincustomerlist.cpp moc_productview.cpp moc_ratingscreen.cpp moc_salespitch.cpp moc_concept.cpp moc_help.cpp moc_newcustomer.cpp moc_orderform.cpp
+	-$(DEL_FILE) moc_mainwindow.cpp moc_customerscreen.cpp moc_adminpanel.cpp moc_adminlogin.cpp moc_admincustomerlist.cpp moc_productview.cpp moc_ratingscreen.cpp moc_salespitch.cpp moc_concept.cpp moc_help.cpp moc_newcustomer.cpp moc_orderform.cpp moc_addcustomer.cpp moc_confirmationwindow.cpp moc_errorwindow.cpp moc_deletecustomer.cpp moc_contact.cpp moc_testimonials.cpp
 moc_mainwindow.cpp: /home/jake/Qt/5.7/gcc_64/include/QtWidgets/QMainWindow \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qmainwindow.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qwidget.h \
@@ -754,8 +802,9 @@ moc_mainwindow.cpp: /home/jake/Qt/5.7/gcc_64/include/QtWidgets/QMainWindow \
 		../Project2/concept.h \
 		../Project2/salespitch.h \
 		../Project2/help.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QWidget \
 		../Project2/orderform.h \
+		../Project2/contact.h \
+		../Project2/testimonials.h \
 		../Project2/adminlogin.h \
 		../Project2/adminpanel.h \
 		../Project2/admincustomerlist.h \
@@ -776,6 +825,10 @@ moc_mainwindow.cpp: /home/jake/Qt/5.7/gcc_64/include/QtWidgets/QMainWindow \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstyle.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabbar.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qrubberband.h \
+		../Project2/addcustomer.h \
+		../Project2/confirmationwindow.h \
+		../Project2/errorwindow.h \
+		../Project2/deletecustomer.h \
 		../Project2/mainwindow.h \
 		/home/jake/Qt/5.7/gcc_64/bin/moc
 	/home/jake/Qt/5.7/gcc_64/bin/moc $(DEFINES) -I/home/jake/Qt/5.7/gcc_64/mkspecs/linux-g++ -I/home/jake/cs1c/iRobots/one/Project2/Project2 -I/home/jake/Qt/5.7/gcc_64/include -I/home/jake/Qt/5.7/gcc_64/include/QtWidgets -I/home/jake/Qt/5.7/gcc_64/include/QtGui -I/home/jake/Qt/5.7/gcc_64/include/QtCore -I. -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Project2/mainwindow.h -o moc_mainwindow.cpp
@@ -892,8 +945,13 @@ moc_customerscreen.cpp: /home/jake/Qt/5.7/gcc_64/include/QtWidgets/QDialog \
 		../Project2/concept.h \
 		../Project2/salespitch.h \
 		../Project2/help.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QWidget \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QMainWindow \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qmainwindow.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qicon.h \
 		../Project2/orderform.h \
+		../Project2/contact.h \
+		../Project2/testimonials.h \
 		../Project2/customerscreen.h \
 		/home/jake/Qt/5.7/gcc_64/bin/moc
 	/home/jake/Qt/5.7/gcc_64/bin/moc $(DEFINES) -I/home/jake/Qt/5.7/gcc_64/mkspecs/linux-g++ -I/home/jake/cs1c/iRobots/one/Project2/Project2 -I/home/jake/Qt/5.7/gcc_64/include -I/home/jake/Qt/5.7/gcc_64/include/QtWidgets -I/home/jake/Qt/5.7/gcc_64/include/QtGui -I/home/jake/Qt/5.7/gcc_64/include/QtCore -I. -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Project2/customerscreen.h -o moc_customerscreen.cpp
@@ -1017,6 +1075,16 @@ moc_adminpanel.cpp: /home/jake/Qt/5.7/gcc_64/include/QtWidgets/QDialog \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabbar.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qrubberband.h \
+		../Project2/addcustomer.h \
+		../Project2/record.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVector \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QString \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QFile \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QTextStream \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QDebug \
+		../Project2/confirmationwindow.h \
+		../Project2/errorwindow.h \
+		../Project2/deletecustomer.h \
 		../Project2/adminpanel.h \
 		/home/jake/Qt/5.7/gcc_64/bin/moc
 	/home/jake/Qt/5.7/gcc_64/bin/moc $(DEFINES) -I/home/jake/Qt/5.7/gcc_64/mkspecs/linux-g++ -I/home/jake/cs1c/iRobots/one/Project2/Project2 -I/home/jake/Qt/5.7/gcc_64/include -I/home/jake/Qt/5.7/gcc_64/include/QtWidgets -I/home/jake/Qt/5.7/gcc_64/include/QtGui -I/home/jake/Qt/5.7/gcc_64/include/QtCore -I. -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Project2/adminpanel.h -o moc_adminpanel.cpp
@@ -1141,6 +1209,16 @@ moc_adminlogin.cpp: /home/jake/Qt/5.7/gcc_64/include/QtWidgets/QDialog \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabbar.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qrubberband.h \
+		../Project2/addcustomer.h \
+		../Project2/record.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVector \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QString \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QFile \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QTextStream \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QDebug \
+		../Project2/confirmationwindow.h \
+		../Project2/errorwindow.h \
+		../Project2/deletecustomer.h \
 		../Project2/adminlogin.h \
 		/home/jake/Qt/5.7/gcc_64/bin/moc
 	/home/jake/Qt/5.7/gcc_64/bin/moc $(DEFINES) -I/home/jake/Qt/5.7/gcc_64/mkspecs/linux-g++ -I/home/jake/cs1c/iRobots/one/Project2/Project2 -I/home/jake/Qt/5.7/gcc_64/include -I/home/jake/Qt/5.7/gcc_64/include/QtWidgets -I/home/jake/Qt/5.7/gcc_64/include/QtGui -I/home/jake/Qt/5.7/gcc_64/include/QtCore -I. -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Project2/adminlogin.h -o moc_adminlogin.cpp
@@ -1263,6 +1341,15 @@ moc_admincustomerlist.cpp: /home/jake/Qt/5.7/gcc_64/include/QtWidgets/QDialog \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabbar.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qrubberband.h \
+		../Project2/addcustomer.h \
+		../Project2/record.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVector \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QString \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QFile \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QTextStream \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QDebug \
+		../Project2/confirmationwindow.h \
+		../Project2/errorwindow.h \
 		../Project2/admincustomerlist.h \
 		/home/jake/Qt/5.7/gcc_64/bin/moc
 	/home/jake/Qt/5.7/gcc_64/bin/moc $(DEFINES) -I/home/jake/Qt/5.7/gcc_64/mkspecs/linux-g++ -I/home/jake/cs1c/iRobots/one/Project2/Project2 -I/home/jake/Qt/5.7/gcc_64/include -I/home/jake/Qt/5.7/gcc_64/include/QtWidgets -I/home/jake/Qt/5.7/gcc_64/include/QtGui -I/home/jake/Qt/5.7/gcc_64/include/QtCore -I. -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Project2/admincustomerlist.h -o moc_admincustomerlist.cpp
@@ -1678,7 +1765,8 @@ moc_concept.cpp: /home/jake/Qt/5.7/gcc_64/include/QtWidgets/QDialog \
 		/home/jake/Qt/5.7/gcc_64/bin/moc
 	/home/jake/Qt/5.7/gcc_64/bin/moc $(DEFINES) -I/home/jake/Qt/5.7/gcc_64/mkspecs/linux-g++ -I/home/jake/cs1c/iRobots/one/Project2/Project2 -I/home/jake/Qt/5.7/gcc_64/include -I/home/jake/Qt/5.7/gcc_64/include/QtWidgets -I/home/jake/Qt/5.7/gcc_64/include/QtGui -I/home/jake/Qt/5.7/gcc_64/include/QtCore -I. -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Project2/concept.h -o moc_concept.cpp
 
-moc_help.cpp: /home/jake/Qt/5.7/gcc_64/include/QtWidgets/QWidget \
+moc_help.cpp: /home/jake/Qt/5.7/gcc_64/include/QtWidgets/QMainWindow \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qmainwindow.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qwidget.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtGui/qwindowdefs.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtCore/qglobal.h \
@@ -1775,6 +1863,8 @@ moc_help.cpp: /home/jake/Qt/5.7/gcc_64/include/QtWidgets/QWidget \
 		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfiledevice.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qicon.h \
 		../Project2/help.h \
 		/home/jake/Qt/5.7/gcc_64/bin/moc
 	/home/jake/Qt/5.7/gcc_64/bin/moc $(DEFINES) -I/home/jake/Qt/5.7/gcc_64/mkspecs/linux-g++ -I/home/jake/cs1c/iRobots/one/Project2/Project2 -I/home/jake/Qt/5.7/gcc_64/include -I/home/jake/Qt/5.7/gcc_64/include/QtWidgets -I/home/jake/Qt/5.7/gcc_64/include/QtGui -I/home/jake/Qt/5.7/gcc_64/include/QtCore -I. -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Project2/help.h -o moc_help.cpp
@@ -1989,11 +2079,642 @@ moc_orderform.cpp: /home/jake/Qt/5.7/gcc_64/include/QtWidgets/QDialog \
 		/home/jake/Qt/5.7/gcc_64/bin/moc
 	/home/jake/Qt/5.7/gcc_64/bin/moc $(DEFINES) -I/home/jake/Qt/5.7/gcc_64/mkspecs/linux-g++ -I/home/jake/cs1c/iRobots/one/Project2/Project2 -I/home/jake/Qt/5.7/gcc_64/include -I/home/jake/Qt/5.7/gcc_64/include/QtWidgets -I/home/jake/Qt/5.7/gcc_64/include/QtGui -I/home/jake/Qt/5.7/gcc_64/include/QtCore -I. -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Project2/orderform.h -o moc_orderform.cpp
 
+moc_addcustomer.cpp: /home/jake/Qt/5.7/gcc_64/include/QtWidgets/QDialog \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qdialog.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qwindowdefs.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qglobal.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qconfig.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfeatures.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtypetraits.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qisenum.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsysinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlogging.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qflags.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_msvc.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmutex.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qnumeric.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qversiontagging.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobjectdefs.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qnamespace.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qwindowdefs_win.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobject.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstring.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qchar.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbytearray.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qrefcount.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qarraydata.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringbuilder.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qalgorithms.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qiterator.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qhashfunctions.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qpair.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbytearraylist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringlist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qregexp.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringmatcher.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreevent.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qscopedpointer.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmetatype.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvarlengtharray.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcontainerfwd.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobject_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmargins.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpaintdevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qrect.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsize.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qpoint.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpalette.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qcolor.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qrgb.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qrgba64.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qbrush.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvector.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qmatrix.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpolygon.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qregion.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qdatastream.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qiodevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qline.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtransform.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpainterpath.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qimage.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpixelformat.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpixmap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsharedpointer.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qshareddata.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qhash.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfont.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfontmetrics.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfontinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qsizepolicy.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qcursor.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qkeysequence.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qevent.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvariant.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qdebug.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtextstream.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlocale.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qset.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcontiguouscache.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qurl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qurlquery.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfile.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfiledevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
+		../Project2/record.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVector \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QString \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QFile \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QTextStream \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QDebug \
+		../Project2/confirmationwindow.h \
+		../Project2/errorwindow.h \
+		../Project2/addcustomer.h \
+		/home/jake/Qt/5.7/gcc_64/bin/moc
+	/home/jake/Qt/5.7/gcc_64/bin/moc $(DEFINES) -I/home/jake/Qt/5.7/gcc_64/mkspecs/linux-g++ -I/home/jake/cs1c/iRobots/one/Project2/Project2 -I/home/jake/Qt/5.7/gcc_64/include -I/home/jake/Qt/5.7/gcc_64/include/QtWidgets -I/home/jake/Qt/5.7/gcc_64/include/QtGui -I/home/jake/Qt/5.7/gcc_64/include/QtCore -I. -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Project2/addcustomer.h -o moc_addcustomer.cpp
+
+moc_confirmationwindow.cpp: /home/jake/Qt/5.7/gcc_64/include/QtWidgets/QDialog \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qdialog.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qwindowdefs.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qglobal.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qconfig.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfeatures.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtypetraits.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qisenum.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsysinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlogging.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qflags.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_msvc.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmutex.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qnumeric.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qversiontagging.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobjectdefs.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qnamespace.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qwindowdefs_win.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobject.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstring.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qchar.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbytearray.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qrefcount.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qarraydata.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringbuilder.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qalgorithms.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qiterator.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qhashfunctions.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qpair.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbytearraylist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringlist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qregexp.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringmatcher.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreevent.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qscopedpointer.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmetatype.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvarlengtharray.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcontainerfwd.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobject_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmargins.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpaintdevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qrect.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsize.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qpoint.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpalette.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qcolor.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qrgb.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qrgba64.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qbrush.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvector.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qmatrix.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpolygon.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qregion.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qdatastream.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qiodevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qline.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtransform.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpainterpath.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qimage.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpixelformat.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpixmap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsharedpointer.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qshareddata.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qhash.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfont.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfontmetrics.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfontinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qsizepolicy.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qcursor.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qkeysequence.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qevent.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvariant.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qdebug.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtextstream.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlocale.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qset.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcontiguouscache.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qurl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qurlquery.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfile.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfiledevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
+		../Project2/confirmationwindow.h \
+		/home/jake/Qt/5.7/gcc_64/bin/moc
+	/home/jake/Qt/5.7/gcc_64/bin/moc $(DEFINES) -I/home/jake/Qt/5.7/gcc_64/mkspecs/linux-g++ -I/home/jake/cs1c/iRobots/one/Project2/Project2 -I/home/jake/Qt/5.7/gcc_64/include -I/home/jake/Qt/5.7/gcc_64/include/QtWidgets -I/home/jake/Qt/5.7/gcc_64/include/QtGui -I/home/jake/Qt/5.7/gcc_64/include/QtCore -I. -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Project2/confirmationwindow.h -o moc_confirmationwindow.cpp
+
+moc_errorwindow.cpp: /home/jake/Qt/5.7/gcc_64/include/QtWidgets/QDialog \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qdialog.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qwindowdefs.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qglobal.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qconfig.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfeatures.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtypetraits.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qisenum.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsysinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlogging.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qflags.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_msvc.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmutex.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qnumeric.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qversiontagging.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobjectdefs.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qnamespace.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qwindowdefs_win.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobject.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstring.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qchar.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbytearray.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qrefcount.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qarraydata.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringbuilder.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qalgorithms.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qiterator.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qhashfunctions.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qpair.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbytearraylist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringlist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qregexp.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringmatcher.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreevent.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qscopedpointer.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmetatype.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvarlengtharray.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcontainerfwd.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobject_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmargins.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpaintdevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qrect.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsize.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qpoint.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpalette.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qcolor.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qrgb.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qrgba64.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qbrush.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvector.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qmatrix.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpolygon.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qregion.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qdatastream.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qiodevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qline.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtransform.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpainterpath.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qimage.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpixelformat.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpixmap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsharedpointer.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qshareddata.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qhash.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfont.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfontmetrics.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfontinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qsizepolicy.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qcursor.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qkeysequence.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qevent.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvariant.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qdebug.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtextstream.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlocale.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qset.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcontiguouscache.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qurl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qurlquery.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfile.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfiledevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
+		../Project2/errorwindow.h \
+		/home/jake/Qt/5.7/gcc_64/bin/moc
+	/home/jake/Qt/5.7/gcc_64/bin/moc $(DEFINES) -I/home/jake/Qt/5.7/gcc_64/mkspecs/linux-g++ -I/home/jake/cs1c/iRobots/one/Project2/Project2 -I/home/jake/Qt/5.7/gcc_64/include -I/home/jake/Qt/5.7/gcc_64/include/QtWidgets -I/home/jake/Qt/5.7/gcc_64/include/QtGui -I/home/jake/Qt/5.7/gcc_64/include/QtCore -I. -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Project2/errorwindow.h -o moc_errorwindow.cpp
+
+moc_deletecustomer.cpp: /home/jake/Qt/5.7/gcc_64/include/QtWidgets/QDialog \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qdialog.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qwindowdefs.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qglobal.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qconfig.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfeatures.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtypetraits.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qisenum.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsysinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlogging.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qflags.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_msvc.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmutex.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qnumeric.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qversiontagging.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobjectdefs.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qnamespace.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qwindowdefs_win.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobject.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstring.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qchar.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbytearray.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qrefcount.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qarraydata.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringbuilder.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qalgorithms.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qiterator.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qhashfunctions.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qpair.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbytearraylist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringlist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qregexp.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringmatcher.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreevent.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qscopedpointer.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmetatype.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvarlengtharray.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcontainerfwd.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobject_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmargins.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpaintdevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qrect.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsize.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qpoint.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpalette.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qcolor.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qrgb.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qrgba64.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qbrush.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvector.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qmatrix.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpolygon.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qregion.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qdatastream.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qiodevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qline.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtransform.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpainterpath.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qimage.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpixelformat.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpixmap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsharedpointer.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qshareddata.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qhash.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfont.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfontmetrics.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfontinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qsizepolicy.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qcursor.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qkeysequence.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qevent.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvariant.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qdebug.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtextstream.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlocale.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qset.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcontiguouscache.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qurl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qurlquery.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfile.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfiledevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
+		../Project2/record.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVector \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QString \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QFile \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QTextStream \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QDebug \
+		../Project2/confirmationwindow.h \
+		../Project2/deletecustomer.h \
+		/home/jake/Qt/5.7/gcc_64/bin/moc
+	/home/jake/Qt/5.7/gcc_64/bin/moc $(DEFINES) -I/home/jake/Qt/5.7/gcc_64/mkspecs/linux-g++ -I/home/jake/cs1c/iRobots/one/Project2/Project2 -I/home/jake/Qt/5.7/gcc_64/include -I/home/jake/Qt/5.7/gcc_64/include/QtWidgets -I/home/jake/Qt/5.7/gcc_64/include/QtGui -I/home/jake/Qt/5.7/gcc_64/include/QtCore -I. -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Project2/deletecustomer.h -o moc_deletecustomer.cpp
+
+moc_contact.cpp: /home/jake/Qt/5.7/gcc_64/include/QtWidgets/QMainWindow \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qmainwindow.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qwindowdefs.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qglobal.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qconfig.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfeatures.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtypetraits.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qisenum.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsysinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlogging.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qflags.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_msvc.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmutex.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qnumeric.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qversiontagging.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobjectdefs.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qnamespace.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qwindowdefs_win.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobject.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstring.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qchar.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbytearray.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qrefcount.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qarraydata.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringbuilder.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qalgorithms.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qiterator.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qhashfunctions.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qpair.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbytearraylist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringlist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qregexp.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringmatcher.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreevent.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qscopedpointer.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmetatype.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvarlengtharray.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcontainerfwd.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobject_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmargins.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpaintdevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qrect.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsize.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qpoint.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpalette.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qcolor.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qrgb.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qrgba64.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qbrush.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvector.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qmatrix.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpolygon.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qregion.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qdatastream.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qiodevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qline.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtransform.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpainterpath.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qimage.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpixelformat.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpixmap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsharedpointer.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qshareddata.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qhash.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfont.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfontmetrics.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfontinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qsizepolicy.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qcursor.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qkeysequence.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qevent.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvariant.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qdebug.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtextstream.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlocale.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qset.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcontiguouscache.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qurl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qurlquery.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfile.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfiledevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qicon.h \
+		../Project2/contact.h \
+		/home/jake/Qt/5.7/gcc_64/bin/moc
+	/home/jake/Qt/5.7/gcc_64/bin/moc $(DEFINES) -I/home/jake/Qt/5.7/gcc_64/mkspecs/linux-g++ -I/home/jake/cs1c/iRobots/one/Project2/Project2 -I/home/jake/Qt/5.7/gcc_64/include -I/home/jake/Qt/5.7/gcc_64/include/QtWidgets -I/home/jake/Qt/5.7/gcc_64/include/QtGui -I/home/jake/Qt/5.7/gcc_64/include/QtCore -I. -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Project2/contact.h -o moc_contact.cpp
+
+moc_testimonials.cpp: /home/jake/Qt/5.7/gcc_64/include/QtWidgets/QMainWindow \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qmainwindow.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qwindowdefs.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qglobal.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qconfig.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfeatures.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtypetraits.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qisenum.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsysinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlogging.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qflags.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_msvc.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmutex.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qnumeric.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qversiontagging.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobjectdefs.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qnamespace.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qwindowdefs_win.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobject.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstring.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qchar.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbytearray.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qrefcount.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qarraydata.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringbuilder.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qalgorithms.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qiterator.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qhashfunctions.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qpair.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbytearraylist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringlist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qregexp.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringmatcher.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreevent.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qscopedpointer.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmetatype.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvarlengtharray.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcontainerfwd.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobject_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmargins.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpaintdevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qrect.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsize.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qpoint.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpalette.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qcolor.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qrgb.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qrgba64.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qbrush.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvector.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qmatrix.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpolygon.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qregion.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qdatastream.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qiodevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qline.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtransform.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpainterpath.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qimage.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpixelformat.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpixmap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsharedpointer.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qshareddata.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qhash.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfont.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfontmetrics.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfontinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qsizepolicy.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qcursor.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qkeysequence.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qevent.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvariant.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qdebug.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtextstream.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlocale.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qset.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcontiguouscache.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qurl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qurlquery.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfile.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfiledevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qicon.h \
+		../Project2/testimonials.h \
+		/home/jake/Qt/5.7/gcc_64/bin/moc
+	/home/jake/Qt/5.7/gcc_64/bin/moc $(DEFINES) -I/home/jake/Qt/5.7/gcc_64/mkspecs/linux-g++ -I/home/jake/cs1c/iRobots/one/Project2/Project2 -I/home/jake/Qt/5.7/gcc_64/include -I/home/jake/Qt/5.7/gcc_64/include/QtWidgets -I/home/jake/Qt/5.7/gcc_64/include/QtGui -I/home/jake/Qt/5.7/gcc_64/include/QtCore -I. -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Project2/testimonials.h -o moc_testimonials.cpp
+
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all: ui_mainwindow.h ui_customerscreen.h ui_adminpanel.h ui_adminlogin.h ui_admincustomerlist.h ui_productview.h ui_ratingscreen.h ui_concept.h ui_salespitch.h ui_help.h ui_newcustomer.h ui_orderform.h
+compiler_uic_make_all: ui_mainwindow.h ui_customerscreen.h ui_adminpanel.h ui_adminlogin.h ui_admincustomerlist.h ui_productview.h ui_ratingscreen.h ui_concept.h ui_salespitch.h ui_help.h ui_newcustomer.h ui_orderform.h ui_addcustomer.h ui_confirmationwindow.h ui_errorwindow.h ui_deletecustomer.h ui_contact.h ui_testimonials.h
 compiler_uic_clean:
-	-$(DEL_FILE) ui_mainwindow.h ui_customerscreen.h ui_adminpanel.h ui_adminlogin.h ui_admincustomerlist.h ui_productview.h ui_ratingscreen.h ui_concept.h ui_salespitch.h ui_help.h ui_newcustomer.h ui_orderform.h
+	-$(DEL_FILE) ui_mainwindow.h ui_customerscreen.h ui_adminpanel.h ui_adminlogin.h ui_admincustomerlist.h ui_productview.h ui_ratingscreen.h ui_concept.h ui_salespitch.h ui_help.h ui_newcustomer.h ui_orderform.h ui_addcustomer.h ui_confirmationwindow.h ui_errorwindow.h ui_deletecustomer.h ui_contact.h ui_testimonials.h
 ui_mainwindow.h: ../Project2/mainwindow.ui \
 		/home/jake/Qt/5.7/gcc_64/bin/uic
 	/home/jake/Qt/5.7/gcc_64/bin/uic ../Project2/mainwindow.ui -o ui_mainwindow.h
@@ -2041,6 +2762,30 @@ ui_newcustomer.h: ../Project2/newcustomer.ui \
 ui_orderform.h: ../Project2/orderform.ui \
 		/home/jake/Qt/5.7/gcc_64/bin/uic
 	/home/jake/Qt/5.7/gcc_64/bin/uic ../Project2/orderform.ui -o ui_orderform.h
+
+ui_addcustomer.h: ../Project2/addcustomer.ui \
+		/home/jake/Qt/5.7/gcc_64/bin/uic
+	/home/jake/Qt/5.7/gcc_64/bin/uic ../Project2/addcustomer.ui -o ui_addcustomer.h
+
+ui_confirmationwindow.h: ../Project2/confirmationwindow.ui \
+		/home/jake/Qt/5.7/gcc_64/bin/uic
+	/home/jake/Qt/5.7/gcc_64/bin/uic ../Project2/confirmationwindow.ui -o ui_confirmationwindow.h
+
+ui_errorwindow.h: ../Project2/errorwindow.ui \
+		/home/jake/Qt/5.7/gcc_64/bin/uic
+	/home/jake/Qt/5.7/gcc_64/bin/uic ../Project2/errorwindow.ui -o ui_errorwindow.h
+
+ui_deletecustomer.h: ../Project2/deletecustomer.ui \
+		/home/jake/Qt/5.7/gcc_64/bin/uic
+	/home/jake/Qt/5.7/gcc_64/bin/uic ../Project2/deletecustomer.ui -o ui_deletecustomer.h
+
+ui_contact.h: ../Project2/contact.ui \
+		/home/jake/Qt/5.7/gcc_64/bin/uic
+	/home/jake/Qt/5.7/gcc_64/bin/uic ../Project2/contact.ui -o ui_contact.h
+
+ui_testimonials.h: ../Project2/testimonials.ui \
+		/home/jake/Qt/5.7/gcc_64/bin/uic
+	/home/jake/Qt/5.7/gcc_64/bin/uic ../Project2/testimonials.ui -o ui_testimonials.h
 
 compiler_yacc_decl_make_all:
 compiler_yacc_decl_clean:
@@ -2170,8 +2915,9 @@ main.o: ../Project2/main.cpp ../Project2/mainwindow.h \
 		../Project2/concept.h \
 		../Project2/salespitch.h \
 		../Project2/help.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QWidget \
 		../Project2/orderform.h \
+		../Project2/contact.h \
+		../Project2/testimonials.h \
 		../Project2/adminlogin.h \
 		../Project2/adminpanel.h \
 		../Project2/admincustomerlist.h \
@@ -2192,6 +2938,10 @@ main.o: ../Project2/main.cpp ../Project2/mainwindow.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstyle.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabbar.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qrubberband.h \
+		../Project2/addcustomer.h \
+		../Project2/confirmationwindow.h \
+		../Project2/errorwindow.h \
+		../Project2/deletecustomer.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QApplication \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qapplication.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreapplication.h \
@@ -2319,8 +3069,9 @@ mainwindow.o: ../Project2/mainwindow.cpp ../Project2/mainwindow.h \
 		../Project2/concept.h \
 		../Project2/salespitch.h \
 		../Project2/help.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QWidget \
 		../Project2/orderform.h \
+		../Project2/contact.h \
+		../Project2/testimonials.h \
 		../Project2/adminlogin.h \
 		../Project2/adminpanel.h \
 		../Project2/admincustomerlist.h \
@@ -2341,7 +3092,42 @@ mainwindow.o: ../Project2/mainwindow.cpp ../Project2/mainwindow.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstyle.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabbar.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qrubberband.h \
+		../Project2/addcustomer.h \
+		../Project2/confirmationwindow.h \
+		../Project2/errorwindow.h \
+		../Project2/deletecustomer.h \
 		ui_mainwindow.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVariant \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QAction \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qaction.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qactiongroup.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QApplication \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qeventloop.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qguiapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qinputmethod.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QButtonGroup \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QHeaderView \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qheaderview.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QLineEdit \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qlineedit.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtextcursor.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtextformat.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpen.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtextoption.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QMenu \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qmenu.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QMenuBar \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qmenubar.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QPushButton \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QStatusBar \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstatusbar.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QWidget \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QMessageBox \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qmessagebox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../Project2/mainwindow.cpp
@@ -2459,9 +3245,46 @@ customerscreen.o: ../Project2/customerscreen.cpp ../Project2/customerscreen.h \
 		../Project2/concept.h \
 		../Project2/salespitch.h \
 		../Project2/help.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QWidget \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QMainWindow \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qmainwindow.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qicon.h \
 		../Project2/orderform.h \
+		../Project2/contact.h \
+		../Project2/testimonials.h \
 		ui_customerscreen.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVariant \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QAction \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qaction.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qactiongroup.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QApplication \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qeventloop.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qguiapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qinputmethod.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QButtonGroup \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QHeaderView \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qheaderview.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstyleoption.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvalidator.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qregularexpression.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qslider.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractslider.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstyle.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabbar.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qrubberband.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QPushButton \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractbutton.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QMessageBox \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qmessagebox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o customerscreen.o ../Project2/customerscreen.cpp
@@ -2586,7 +3409,35 @@ adminpanel.o: ../Project2/adminpanel.cpp ../Project2/adminpanel.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabbar.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qrubberband.h \
-		ui_adminpanel.h
+		../Project2/addcustomer.h \
+		../Project2/record.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVector \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QString \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QFile \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QTextStream \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QDebug \
+		../Project2/confirmationwindow.h \
+		../Project2/errorwindow.h \
+		../Project2/deletecustomer.h \
+		ui_adminpanel.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVariant \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QAction \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qaction.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qactiongroup.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QApplication \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qeventloop.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qguiapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qinputmethod.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QButtonGroup \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QHeaderView \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qheaderview.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QPushButton \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o adminpanel.o ../Project2/adminpanel.cpp
 
 adminlogin.o: ../Project2/adminlogin.cpp ../Project2/adminlogin.h \
@@ -2710,10 +3561,45 @@ adminlogin.o: ../Project2/adminlogin.cpp ../Project2/adminlogin.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabbar.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qrubberband.h \
+		../Project2/addcustomer.h \
+		../Project2/record.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVector \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QString \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QFile \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QTextStream \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QDebug \
+		../Project2/confirmationwindow.h \
+		../Project2/errorwindow.h \
+		../Project2/deletecustomer.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QMessageBox \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qmessagebox.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/QDebug \
-		ui_adminlogin.h
+		ui_adminlogin.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVariant \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QAction \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qaction.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qactiongroup.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QApplication \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qeventloop.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qguiapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qinputmethod.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QButtonGroup \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QHeaderView \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qheaderview.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QLabel \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qlabel.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QLineEdit \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qlineedit.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtextcursor.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtextformat.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpen.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtextoption.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QPushButton \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o adminlogin.o ../Project2/adminlogin.cpp
 
 record.o: ../Project2/record.cpp ../Project2/record.h \
@@ -2906,13 +3792,40 @@ admincustomerlist.o: ../Project2/admincustomerlist.cpp ../Project2/admincustomer
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabbar.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qrubberband.h \
-		ui_admincustomerlist.h \
+		../Project2/addcustomer.h \
 		../Project2/record.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVector \
 		/home/jake/Qt/5.7/gcc_64/include/QtCore/QString \
 		/home/jake/Qt/5.7/gcc_64/include/QtCore/QFile \
 		/home/jake/Qt/5.7/gcc_64/include/QtCore/QTextStream \
-		/home/jake/Qt/5.7/gcc_64/include/QtCore/QDebug
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QDebug \
+		../Project2/confirmationwindow.h \
+		../Project2/errorwindow.h \
+		ui_admincustomerlist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVariant \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QAction \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qaction.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qactiongroup.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QApplication \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qeventloop.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qguiapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qinputmethod.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QButtonGroup \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QComboBox \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qcombobox.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QGroupBox \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qgroupbox.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QHeaderView \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qheaderview.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QPushButton \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QRadioButton \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qradiobutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o admincustomerlist.o ../Project2/admincustomerlist.cpp
 
 productview.o: ../Project2/productview.cpp ../Project2/productview.h \
@@ -3017,7 +3930,48 @@ productview.o: ../Project2/productview.cpp ../Project2/productview.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QLabel \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qlabel.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qframe.h \
-		ui_productview.h
+		ui_productview.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVariant \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QAction \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qaction.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qicon.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qactiongroup.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QApplication \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qeventloop.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qguiapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qinputmethod.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QButtonGroup \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QHeaderView \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qheaderview.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstyleoption.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvalidator.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qregularexpression.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qslider.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractslider.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstyle.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabbar.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qrubberband.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QPushButton \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QTextEdit \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtextedit.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtextdocument.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtextoption.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtextcursor.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtextformat.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpen.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o productview.o ../Project2/productview.cpp
 
 ratingscreen.o: ../Project2/ratingscreen.cpp ../Project2/ratingscreen.h \
@@ -3119,7 +4073,46 @@ ratingscreen.o: ../Project2/ratingscreen.cpp ../Project2/ratingscreen.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfiledevice.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
-		ui_ratingscreen.h
+		ui_ratingscreen.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVariant \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QAction \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qaction.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qicon.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qactiongroup.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QApplication \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qeventloop.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qguiapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qinputmethod.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QButtonGroup \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QComboBox \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qcombobox.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstyleoption.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvalidator.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qregularexpression.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qslider.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractslider.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstyle.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabbar.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qrubberband.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qframe.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QHeaderView \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qheaderview.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QLabel \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qlabel.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QPushButton \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o ratingscreen.o ../Project2/ratingscreen.cpp
 
 concept.o: ../Project2/concept.cpp ../Project2/concept.h \
@@ -3221,7 +4214,44 @@ concept.o: ../Project2/concept.cpp ../Project2/concept.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfiledevice.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
-		ui_concept.h
+		ui_concept.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVariant \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QAction \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qaction.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qicon.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qactiongroup.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QApplication \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qeventloop.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qguiapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qinputmethod.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QButtonGroup \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QHeaderView \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qheaderview.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qframe.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstyleoption.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvalidator.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qregularexpression.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qslider.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractslider.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstyle.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabbar.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qrubberband.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QLabel \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qlabel.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QPushButton \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o concept.o ../Project2/concept.cpp
 
 salespitch.o: ../Project2/salespitch.cpp ../Project2/salespitch.h \
@@ -3323,11 +4353,49 @@ salespitch.o: ../Project2/salespitch.cpp ../Project2/salespitch.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfiledevice.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
-		ui_salespitch.h
+		ui_salespitch.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVariant \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QAction \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qaction.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qicon.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qactiongroup.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QApplication \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qeventloop.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qguiapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qinputmethod.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QButtonGroup \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QHeaderView \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qheaderview.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qframe.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstyleoption.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvalidator.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qregularexpression.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qslider.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractslider.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstyle.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabbar.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qrubberband.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QLabel \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qlabel.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QPushButton \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o salespitch.o ../Project2/salespitch.cpp
 
 help.o: ../Project2/help.cpp ../Project2/help.h \
-		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QWidget \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QMainWindow \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qmainwindow.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qwidget.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtGui/qwindowdefs.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtCore/qglobal.h \
@@ -3424,7 +4492,52 @@ help.o: ../Project2/help.cpp ../Project2/help.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfiledevice.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
-		ui_help.h
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qicon.h \
+		ui_help.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVariant \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QAction \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qaction.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qactiongroup.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QApplication \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qeventloop.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qguiapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qinputmethod.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QButtonGroup \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QHeaderView \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qheaderview.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qframe.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstyleoption.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvalidator.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qregularexpression.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qslider.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractslider.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstyle.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabbar.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qrubberband.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QLabel \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qlabel.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QPushButton \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QTextEdit \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtextedit.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtextdocument.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtextoption.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtextcursor.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtextformat.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpen.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o help.o ../Project2/help.cpp
 
 newcustomer.o: ../Project2/newcustomer.cpp ../Project2/newcustomer.h \
@@ -3526,7 +4639,50 @@ newcustomer.o: ../Project2/newcustomer.cpp ../Project2/newcustomer.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfiledevice.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
-		ui_newcustomer.h
+		ui_newcustomer.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVariant \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QAction \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qaction.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qicon.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qactiongroup.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QApplication \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qeventloop.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qguiapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qinputmethod.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QButtonGroup \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QCheckBox \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qcheckbox.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QHeaderView \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qheaderview.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qframe.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstyleoption.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvalidator.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qregularexpression.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qslider.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractslider.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstyle.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabbar.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qrubberband.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QLineEdit \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qlineedit.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtextcursor.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtextformat.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpen.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtextoption.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QPushButton \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qpushbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o newcustomer.o ../Project2/newcustomer.cpp
 
 orderform.o: ../Project2/orderform.cpp ../Project2/orderform.h \
@@ -3635,9 +4791,789 @@ orderform.o: ../Project2/orderform.cpp ../Project2/orderform.h \
 		/home/jake/Qt/5.7/gcc_64/include/QtCore/QTextStream \
 		/home/jake/Qt/5.7/gcc_64/include/QtCore/QDebug \
 		ui_orderform.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVariant \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QAction \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qaction.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qicon.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qactiongroup.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QApplication \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qeventloop.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qguiapplication.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qinputmethod.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QButtonGroup \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QGridLayout \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qgridlayout.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qlayout.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qlayoutitem.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qboxlayout.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QHeaderView \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qheaderview.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qframe.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstyleoption.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvalidator.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qregularexpression.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qslider.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractslider.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qstyle.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabbar.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qrubberband.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QLabel \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qlabel.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QPushButton \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QSpinBox \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qspinbox.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QWidget \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QMessageBox \
 		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qmessagebox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o orderform.o ../Project2/orderform.cpp
+
+addcustomer.o: ../Project2/addcustomer.cpp ../Project2/addcustomer.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QDialog \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qdialog.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qwindowdefs.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qglobal.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qconfig.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfeatures.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtypetraits.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qisenum.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsysinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlogging.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qflags.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_msvc.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmutex.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qnumeric.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qversiontagging.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobjectdefs.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qnamespace.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qwindowdefs_win.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobject.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstring.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qchar.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbytearray.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qrefcount.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qarraydata.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringbuilder.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qalgorithms.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qiterator.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qhashfunctions.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qpair.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbytearraylist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringlist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qregexp.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringmatcher.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreevent.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qscopedpointer.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmetatype.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvarlengtharray.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcontainerfwd.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobject_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmargins.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpaintdevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qrect.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsize.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qpoint.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpalette.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qcolor.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qrgb.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qrgba64.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qbrush.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvector.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qmatrix.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpolygon.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qregion.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qdatastream.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qiodevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qline.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtransform.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpainterpath.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qimage.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpixelformat.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpixmap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsharedpointer.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qshareddata.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qhash.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfont.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfontmetrics.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfontinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qsizepolicy.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qcursor.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qkeysequence.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qevent.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvariant.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qdebug.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtextstream.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlocale.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qset.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcontiguouscache.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qurl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qurlquery.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfile.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfiledevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
+		../Project2/record.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVector \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QString \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QFile \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QTextStream \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QDebug \
+		../Project2/confirmationwindow.h \
+		../Project2/errorwindow.h \
+		ui_addcustomer.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o addcustomer.o ../Project2/addcustomer.cpp
+
+confirmationwindow.o: ../Project2/confirmationwindow.cpp ../Project2/confirmationwindow.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QDialog \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qdialog.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qwindowdefs.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qglobal.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qconfig.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfeatures.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtypetraits.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qisenum.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsysinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlogging.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qflags.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_msvc.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmutex.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qnumeric.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qversiontagging.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobjectdefs.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qnamespace.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qwindowdefs_win.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobject.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstring.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qchar.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbytearray.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qrefcount.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qarraydata.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringbuilder.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qalgorithms.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qiterator.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qhashfunctions.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qpair.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbytearraylist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringlist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qregexp.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringmatcher.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreevent.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qscopedpointer.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmetatype.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvarlengtharray.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcontainerfwd.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobject_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmargins.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpaintdevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qrect.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsize.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qpoint.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpalette.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qcolor.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qrgb.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qrgba64.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qbrush.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvector.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qmatrix.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpolygon.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qregion.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qdatastream.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qiodevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qline.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtransform.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpainterpath.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qimage.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpixelformat.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpixmap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsharedpointer.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qshareddata.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qhash.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfont.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfontmetrics.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfontinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qsizepolicy.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qcursor.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qkeysequence.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qevent.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvariant.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qdebug.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtextstream.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlocale.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qset.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcontiguouscache.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qurl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qurlquery.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfile.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfiledevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
+		ui_confirmationwindow.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o confirmationwindow.o ../Project2/confirmationwindow.cpp
+
+errorwindow.o: ../Project2/errorwindow.cpp ../Project2/errorwindow.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QDialog \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qdialog.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qwindowdefs.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qglobal.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qconfig.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfeatures.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtypetraits.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qisenum.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsysinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlogging.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qflags.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_msvc.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmutex.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qnumeric.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qversiontagging.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobjectdefs.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qnamespace.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qwindowdefs_win.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobject.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstring.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qchar.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbytearray.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qrefcount.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qarraydata.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringbuilder.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qalgorithms.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qiterator.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qhashfunctions.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qpair.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbytearraylist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringlist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qregexp.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringmatcher.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreevent.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qscopedpointer.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmetatype.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvarlengtharray.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcontainerfwd.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobject_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmargins.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpaintdevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qrect.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsize.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qpoint.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpalette.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qcolor.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qrgb.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qrgba64.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qbrush.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvector.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qmatrix.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpolygon.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qregion.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qdatastream.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qiodevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qline.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtransform.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpainterpath.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qimage.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpixelformat.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpixmap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsharedpointer.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qshareddata.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qhash.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfont.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfontmetrics.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfontinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qsizepolicy.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qcursor.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qkeysequence.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qevent.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvariant.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qdebug.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtextstream.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlocale.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qset.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcontiguouscache.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qurl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qurlquery.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfile.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfiledevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
+		ui_errorwindow.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o errorwindow.o ../Project2/errorwindow.cpp
+
+deletecustomer.o: ../Project2/deletecustomer.cpp ../Project2/deletecustomer.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QDialog \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qdialog.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qwindowdefs.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qglobal.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qconfig.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfeatures.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtypetraits.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qisenum.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsysinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlogging.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qflags.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_msvc.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmutex.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qnumeric.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qversiontagging.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobjectdefs.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qnamespace.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qwindowdefs_win.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobject.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstring.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qchar.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbytearray.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qrefcount.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qarraydata.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringbuilder.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qalgorithms.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qiterator.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qhashfunctions.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qpair.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbytearraylist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringlist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qregexp.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringmatcher.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreevent.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qscopedpointer.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmetatype.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvarlengtharray.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcontainerfwd.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobject_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmargins.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpaintdevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qrect.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsize.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qpoint.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpalette.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qcolor.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qrgb.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qrgba64.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qbrush.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvector.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qmatrix.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpolygon.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qregion.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qdatastream.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qiodevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qline.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtransform.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpainterpath.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qimage.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpixelformat.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpixmap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsharedpointer.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qshareddata.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qhash.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfont.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfontmetrics.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfontinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qsizepolicy.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qcursor.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qkeysequence.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qevent.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvariant.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qdebug.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtextstream.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlocale.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qset.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcontiguouscache.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qurl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qurlquery.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfile.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfiledevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
+		../Project2/record.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QVector \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QString \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QFile \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QTextStream \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QDebug \
+		../Project2/confirmationwindow.h \
+		ui_deletecustomer.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o deletecustomer.o ../Project2/deletecustomer.cpp
+
+person.o: ../Project2/person.cpp ../Project2/person.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QString \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstring.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qchar.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qglobal.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qconfig.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfeatures.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtypetraits.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qisenum.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsysinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlogging.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qflags.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_msvc.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmutex.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qnumeric.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qversiontagging.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbytearray.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qrefcount.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qnamespace.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qarraydata.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringbuilder.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o person.o ../Project2/person.cpp
+
+admin.o: ../Project2/admin.cpp ../Project2/admin.h \
+		../Project2/person.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QString \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstring.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qchar.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qglobal.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qconfig.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfeatures.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtypetraits.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qisenum.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsysinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlogging.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qflags.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_msvc.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmutex.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qnumeric.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qversiontagging.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbytearray.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qrefcount.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qnamespace.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qarraydata.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringbuilder.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o admin.o ../Project2/admin.cpp
+
+customer.o: ../Project2/customer.cpp ../Project2/customer.h \
+		../Project2/person.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/QString \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstring.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qchar.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qglobal.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qconfig.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfeatures.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtypetraits.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qisenum.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsysinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlogging.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qflags.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_msvc.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmutex.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qnumeric.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qversiontagging.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbytearray.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qrefcount.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qnamespace.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qarraydata.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringbuilder.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o customer.o ../Project2/customer.cpp
+
+contact.o: ../Project2/contact.cpp ../Project2/contact.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QMainWindow \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qmainwindow.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qwindowdefs.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qglobal.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qconfig.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfeatures.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtypetraits.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qisenum.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsysinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlogging.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qflags.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_msvc.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmutex.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qnumeric.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qversiontagging.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobjectdefs.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qnamespace.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qwindowdefs_win.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobject.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstring.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qchar.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbytearray.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qrefcount.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qarraydata.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringbuilder.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qalgorithms.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qiterator.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qhashfunctions.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qpair.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbytearraylist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringlist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qregexp.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringmatcher.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreevent.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qscopedpointer.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmetatype.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvarlengtharray.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcontainerfwd.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobject_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmargins.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpaintdevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qrect.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsize.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qpoint.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpalette.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qcolor.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qrgb.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qrgba64.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qbrush.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvector.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qmatrix.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpolygon.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qregion.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qdatastream.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qiodevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qline.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtransform.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpainterpath.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qimage.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpixelformat.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpixmap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsharedpointer.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qshareddata.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qhash.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfont.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfontmetrics.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfontinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qsizepolicy.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qcursor.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qkeysequence.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qevent.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvariant.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qdebug.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtextstream.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlocale.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qset.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcontiguouscache.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qurl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qurlquery.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfile.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfiledevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qicon.h \
+		ui_contact.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QMessageBox \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qmessagebox.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qdialog.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o contact.o ../Project2/contact.cpp
+
+testimonials.o: ../Project2/testimonials.cpp ../Project2/testimonials.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/QMainWindow \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qmainwindow.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qwindowdefs.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qglobal.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qconfig.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfeatures.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtypetraits.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qisenum.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsysinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlogging.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qflags.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qatomic_msvc.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmutex.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qnumeric.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qversiontagging.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobjectdefs.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qnamespace.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qwindowdefs_win.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobject.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstring.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qchar.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbytearray.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qrefcount.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qarraydata.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringbuilder.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qalgorithms.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qiterator.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qhashfunctions.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qpair.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qbytearraylist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringlist.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qregexp.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qstringmatcher.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcoreevent.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qscopedpointer.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmetatype.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvarlengtharray.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcontainerfwd.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qobject_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmargins.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpaintdevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qrect.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsize.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qpoint.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpalette.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qcolor.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qrgb.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qrgba64.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qbrush.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvector.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qmatrix.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpolygon.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qregion.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qdatastream.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qiodevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qline.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtransform.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpainterpath.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qimage.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpixelformat.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qpixmap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsharedpointer.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qshareddata.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qhash.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfont.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfontmetrics.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qfontinfo.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qsizepolicy.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qcursor.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qkeysequence.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qevent.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qvariant.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qmap.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qdebug.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qtextstream.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qlocale.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qset.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qcontiguouscache.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qurl.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qurlquery.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfile.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtCore/qfiledevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
+		/home/jake/Qt/5.7/gcc_64/include/QtGui/qicon.h \
+		ui_testimonials.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o testimonials.o ../Project2/testimonials.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp
@@ -3674,6 +5610,24 @@ moc_newcustomer.o: moc_newcustomer.cpp
 
 moc_orderform.o: moc_orderform.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_orderform.o moc_orderform.cpp
+
+moc_addcustomer.o: moc_addcustomer.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_addcustomer.o moc_addcustomer.cpp
+
+moc_confirmationwindow.o: moc_confirmationwindow.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_confirmationwindow.o moc_confirmationwindow.cpp
+
+moc_errorwindow.o: moc_errorwindow.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_errorwindow.o moc_errorwindow.cpp
+
+moc_deletecustomer.o: moc_deletecustomer.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_deletecustomer.o moc_deletecustomer.cpp
+
+moc_contact.o: moc_contact.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_contact.o moc_contact.cpp
+
+moc_testimonials.o: moc_testimonials.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_testimonials.o moc_testimonials.cpp
 
 ####### Install
 

@@ -19,98 +19,129 @@ class Record
 {
 public:
     /**
-     * Default constructor will read information from text file
+     * @brief Default constructor will read information from text file
      */
     Record();
     /**
-     *  Constructor takes each member vector as and parameter
+     * @brief Record constructor takes in each field
      */
     Record(QVector<QString>, QVector<QString>, QVector<QString>,
            QVector<QString>, QVector<QString>, QVector<bool>, QVector<bool>,
            QString);
+
     /**
-     * Copy Constructor
+     * @brief Record Copy Constructor
+     * @param obj object to be copied into
      */
     Record(const Record& obj);
     /**
-     * returns the vector of names
+     * @brief getNameList returns the name list
+     * @return  list of names
      */
     QVector<QString> getNameList() const;
     /**
-     * returns the vector of first address lines
+     * @brief getAddressList1 returns the vector of first address lines
+     * @return addresslist1
      */
     QVector<QString> getAddressList1() const;
     /**
-     * returns the vector of second address lines
+     * @brief getAddressList2 returns the vector of second address lines
+     * @return addresslist2
      */
     QVector<QString> getAddressList2() const;
     /**
-     * returns the vector of interest
+     * @brief getInterestList returns list of interests
+     * @return list of interests
      */
     QVector<QString> getInterestList() const;
     /**
-     * returns the vector of status
+     * @brief getStatusList returns list of statuses
+     * @return list of status
      */
     QVector<QString> getStatusList() const;
     /**
-     * returns the vector of booleans indicating if they are key
+     * @brief getKeyList gets the list of key/nonkey
+     * @return list of T/F if the customer is key
      */
     QVector<bool> getKeyList() const;
     /**
-     * returns the vector of booleans indicating if the customer has recieved the pamphlet
+     * @brief getRecievedList reurns list of T/F indicating if the customer has recieved
+     * @return list of T/F is the customer has recieved
      */
     QVector<bool> getRecievedList() const;
     /**
-     * returns the string of testimonials
-     */    QString getTestimonial() const;
+     * @brief getTestimonials returns the string of testimonials
+     * @return testimonials
+     */
+    QString getTestimonial() const;
     /**
-     * adds a customer with properties pased in as paramters
+     * @brief addCustomer adds the customer
+     * @param inName name of new customer
+     * @param inAddressLine1 line one
+     * @param inAddressLine2 line two
+     * @param inInterest interest of new customer
+     * @param inStatus status of new customer
      */
     void addCustomer(QString inName, QString inAddressLine1,
                      QString inAddressLine2, QString inInterest,
                      QString inStatus);
     /**
-     * checks for the existnace of a record with the name passed as a parameter
+     * @brief  checkNamechecks for the existnace of a record with the name passed as a parameter
+     * @param  inName the name being checked
+     * @returns true if the user exists, false otherwise
      */
     bool checkName(QString inName) const;
     /**
-     * returns the index of the name passed as a parameter
+     * @brief findUserIndex returns the index of the name passed as a parameter
+     * @param the name of the user
+     * @return index of user
      */
     int findUserIndex(QString inName) const;
     /**
-     * prints the record to the file
+     * @brief prints the record to the file
      */
     void save() const;
     /**
-     * sets the index of the current user that is logged in
+     * @brief setUserIndex sets the index of the current user that is logged in
+     * @param inIndex the new user index
      */
     void setUserIndex(int inIndex);
     /**
-     * returns the the index of the current user
+     * @brief getUserIndex returns the the index of the current user
+     * @return the current userIndex
      */
     int getUserIndex() const;
     /**
-     * returns the true if the indexed customer has recieved a pamphlet , false otherwise
+     * @brief getHasRecieved returns the true if the indexed customer has recieved a pamphlet , false otherwise
+     * @param index is the index of the customer
+     * @return true if the user has recieved, false otherwise
      */
     bool getHasRecieved(int index) const;
     /**
-     * sets the indexed customer's "hasRecieved" field to true
+     * @brief setHasRecieved sets the indexed customer's "hasRecieved" field to true
+     * @param index is the index to be set
      */
     void setHasRecieved(int index);
     /**
-     * removes all info at given index
+     *  @brief remove removes all info at given index
+     * 	@param index is the index of the user to be removed
      */
     void remove(int index);
     /**
-     * returns both lines of the address
+     * @brief getAddress returns both lines of the address
      */
     QString getAddress(int index);
     /**
-     * prints the record to the text file
+     * @brief operator << prints the info to file
+     * @param os ostream var, not used
+     * @param obj record object to be printed
+     * @return the full address
      */
     friend std::ostream& operator<<(std::ostream& os, const Record& obj);
     /**
-     * overloaded assignment operator, essentially a copy constructor
+     * @brief operator =  overloaded assignment operator, essentially a copy constructor
+     * @param obj
+     * @return an empty ostream var
      */
     Record &operator=(const Record& obj);
 

@@ -33,6 +33,7 @@ public:
     QRadioButton *radioButton_no;
     QComboBox *comboBox_customer;
     QPushButton *pushButton;
+    QPushButton *pushButton_editInfo;
 
     void setupUi(QDialog *adminCustomerList)
     {
@@ -76,6 +77,9 @@ public:
         pushButton = new QPushButton(adminCustomerList);
         pushButton->setObjectName(QStringLiteral("pushButton"));
         pushButton->setGeometry(QRect(50, 560, 80, 22));
+        pushButton_editInfo = new QPushButton(adminCustomerList);
+        pushButton_editInfo->setObjectName(QStringLiteral("pushButton_editInfo"));
+        pushButton_editInfo->setGeometry(QRect(190, 430, 131, 22));
 
         retranslateUi(adminCustomerList);
 
@@ -104,6 +108,7 @@ public:
         radioButton_yes->setText(QApplication::translate("adminCustomerList", "Yes", 0));
         radioButton_no->setText(QApplication::translate("adminCustomerList", "No", 0));
         pushButton->setText(QApplication::translate("adminCustomerList", "Save", 0));
+        pushButton_editInfo->setText(QApplication::translate("adminCustomerList", "Edit Customer Info", 0));
     } // retranslateUi
 
 };
