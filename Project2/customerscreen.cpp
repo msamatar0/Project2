@@ -91,3 +91,17 @@ void customerScreen::on_pushButton_contact_clicked()
     contactUs = new contact(this);
     contactUs->show();
 }
+
+void customerScreen::on_pushButton_maint_clicked()
+{
+    maint = new maintenance(this);
+    this->hide();
+    maint->show();
+}
+
+void customerScreen::on_pushButton_pitch_clicked()
+{
+    prod = new product(this);
+    this->hide();
+    prod->show();
+}

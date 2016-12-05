@@ -33,7 +33,9 @@ SOURCES += main.cpp\
     admin.cpp \
     customer.cpp \
     contact.cpp \
-    testimonials.cpp
+    testimonials.cpp \
+    maintenance.cpp \
+    product.cpp
 
 HEADERS  += mainwindow.h \
     customerscreen.h \
@@ -55,7 +57,9 @@ HEADERS  += mainwindow.h \
     customer.h \
     person.h \
     contact.h \
-    testimonials.h
+    testimonials.h \
+    maintenance.h \
+    product.h
 
 FORMS    += mainwindow.ui \
     customerscreen.ui \
@@ -73,4 +77,6 @@ FORMS    += mainwindow.ui \
     errorwindow.ui \
     deletecustomer.ui \
     contact.ui \
-    testimonials.ui
+    testimonials.ui \
+    maintenance.ui \
+    product.ui

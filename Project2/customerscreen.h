@@ -11,6 +11,8 @@
 #include "orderform.h"
 #include "contact.h"
 #include "testimonials.h"
+#include "maintenance.h"
+#include "product.h"
 
 namespace Ui {
 class customerScreen;
@@ -69,6 +71,14 @@ private slots:
      * @brief on_pushButton_contact_clicked handles the contact button
      */
     void on_pushButton_contact_clicked();
+    /**
+     * @brief on_pushButton_maint_clicked handles maintenance button
+     */
+    void on_pushButton_maint_clicked();
+    /**
+     * @brief on_pushButton_product_clicked handles product info button
+     */
+    void on_pushButton_pitch_clicked();
 
 private:
     /**
@@ -84,6 +94,8 @@ private:
     concept *con;
     salespitch *pitch;
     orderform *form;
+    product *prod;
+    maintenance *maint;
 };
 
 #endif // CUSTOMERSCREEN_H

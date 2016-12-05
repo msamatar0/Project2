@@ -258,5 +258,8 @@ QString Record::getAddress(int index){
     return (addressLine1[index] + "\n" + addressLine2[index]);
 }
 
+void Record::setInterest(int index, QString intr){
+    interest.replace(index, intr);
+}
 
 

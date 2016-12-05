@@ -12,10 +12,17 @@ class concept : public QDialog
     Q_OBJECT
 
 public:
+    /**
+     * @brief concept default constructor
+     * @param parent
+     */
     explicit concept(QWidget *parent = 0);
     ~concept();
 
 private slots:
+    /**
+     * @brief on_backButton_clicked handles back button
+     */
     void on_backButton_clicked();
 
 private:

@@ -144,6 +144,10 @@ public:
      * @return an empty ostream var
      */
     Record &operator=(const Record& obj);
+    /**
+     * sets the indexed customer's interest
+     */
+    void setInterest(int index, QString intr);
 
 
 private:
