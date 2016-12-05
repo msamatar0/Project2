@@ -15,7 +15,10 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QMainWindow>
+#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QWidget>
 
@@ -24,33 +27,47 @@ QT_BEGIN_NAMESPACE
 class Ui_help
 {
 public:
+    QWidget *centralwidget;
+    QPushButton *pushButton;
     QLabel *label;
     QTextEdit *textEdit;
-    QPushButton *pushButton;
+    QMenuBar *menubar;
+    QStatusBar *statusbar;
 
-    void setupUi(QWidget *help)
+    void setupUi(QMainWindow *help)
     {
         if (help->objectName().isEmpty())
             help->setObjectName(QStringLiteral("help"));
-        help->resize(400, 300);
-        label = new QLabel(help);
-        label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(10, 10, 59, 14));
-        textEdit = new QTextEdit(help);
-        textEdit->setObjectName(QStringLiteral("textEdit"));
-        textEdit->setGeometry(QRect(20, 40, 351, 201));
-        pushButton = new QPushButton(help);
+        help->resize(395, 335);
+        centralwidget = new QWidget(help);
+        centralwidget->setObjectName(QStringLiteral("centralwidget"));
+        pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
         pushButton->setGeometry(QRect(270, 260, 80, 22));
+        label = new QLabel(centralwidget);
+        label->setObjectName(QStringLiteral("label"));
+        label->setGeometry(QRect(10, 10, 59, 14));
+        textEdit = new QTextEdit(centralwidget);
+        textEdit->setObjectName(QStringLiteral("textEdit"));
+        textEdit->setGeometry(QRect(20, 40, 351, 201));
+        help->setCentralWidget(centralwidget);
+        menubar = new QMenuBar(help);
+        menubar->setObjectName(QStringLiteral("menubar"));
+        menubar->setGeometry(QRect(0, 0, 395, 19));
+        help->setMenuBar(menubar);
+        statusbar = new QStatusBar(help);
+        statusbar->setObjectName(QStringLiteral("statusbar"));
+        help->setStatusBar(statusbar);
 
         retranslateUi(help);
 
         QMetaObject::connectSlotsByName(help);
     } // setupUi
 
-    void retranslateUi(QWidget *help)
+    void retranslateUi(QMainWindow *help)
     {
-        help->setWindowTitle(QApplication::translate("help", "Form", 0));
+        help->setWindowTitle(QApplication::translate("help", "MainWindow", 0));
+        pushButton->setText(QApplication::translate("help", "Close", 0));
         label->setText(QApplication::translate("help", "Help", 0));
         textEdit->setHtml(QApplication::translate("help", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
@@ -91,7 +108,6 @@ public:
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /"
                         "></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", 0));
-        pushButton->setText(QApplication::translate("help", "Close", 0));
     } // retranslateUi
 
 };

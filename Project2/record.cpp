@@ -28,6 +28,7 @@ Record::Record()
 
         qDebug() << "YEEAOW";
         while(!fin.atEnd()){
+            //add in each relevant field
             name.push_back(fin.readLine());
             addressLine1.push_back(fin.readLine());
             addressLine2.push_back(fin.readLine());
@@ -97,6 +98,7 @@ void Record::save() const{
             qDebug() << endl;
 
 
+            //print relevant data to file
             fout << name[index] << endl;
             fout << addressLine1[index] << endl;
             fout << addressLine2[index] << endl;
@@ -122,9 +124,6 @@ void Record::save() const{
 //this will be used later once we are adding members,
 //we can have a simple window pop up whenver a person
 //logs on who is not already in the database
-/*
- *
- * THIS CODE HAS NOT BEEN DEBUGGED YET */
 void Record::addCustomer(QString inName, QString inAddressLine1,
                          QString inAddressLine2, QString inInterest,
                          QString inStatus){
@@ -164,6 +163,7 @@ Record::Record(const Record& obj){
    //save existing record first
    std::cout << this;
 
+   //copy data over
    userIndex = obj.userIndex;
    name = obj.name;
    addressLine1 = obj.addressLine1;
@@ -180,6 +180,7 @@ Record &Record::operator=(const Record& obj){
    //save current record first
    std::cout << this;
 
+   //copy data over
    userIndex = obj.userIndex;
    name = obj.name;
    addressLine1 = obj.addressLine1;
