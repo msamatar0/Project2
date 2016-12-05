@@ -5,6 +5,7 @@
 
 #include "customerscreen.h"
 #include "adminlogin.h"
+#include "addcustomer.h"
 
 namespace Ui {
 class MainWindow;
@@ -24,6 +25,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    addCustomer *newCust;
     customerScreen *customer;
     adminLogin *admin;
 

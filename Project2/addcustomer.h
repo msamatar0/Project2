@@ -25,7 +25,13 @@ public:
      * @param parent - calling node
      * @param member - name of member to edit
      */
-    addCustomer(QWidget *parent, QString member);
+    addCustomer(QWidget *parent, QString member, bool edit);
+    /**
+     * @brief addCustomer nondefault constructor for use with registering
+     * @param parent
+     * @param name
+     */
+    addCustomer(QWidget *parent, QString name);
     ~addCustomer();
     /**
      * @brief deleteCustomer - deletes a customer from the database

@@ -10,7 +10,7 @@ addCustomer::addCustomer(QWidget *parent) :
     ui->setupUi(this);
 }
 
-addCustomer::addCustomer(QWidget *parent, QString member) :
+addCustomer::addCustomer(QWidget *parent, QString member, bool edit) :
     QDialog(parent),
     ui(new Ui::addCustomer)
 {
@@ -34,6 +34,16 @@ addCustomer::addCustomer(QWidget *parent, QString member) :
     ui->lineEdit_address2->setText(address2.at(index));
     ui->checkBox_key->setChecked(isKey.at(index));
 
+}
+
+addCustomer::addCustomer(QWidget *parent, QString name) :
+    QDialog(parent),
+    ui(new Ui::addCustomer)
+{
+    ui->setupUi(this);
+    ui->pushButton_add->setText("Register!");
+
+    ui->lineEdit_name->setText(name);
 }
 
 addCustomer::~addCustomer()

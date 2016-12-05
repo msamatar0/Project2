@@ -3,6 +3,7 @@
 #include "record.h"
 #include <QMessageBox>
 #include <iostream>
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -34,17 +35,24 @@ void MainWindow::on_login_pushButton_enter_clicked()
        std::cout << compareRec;
        qDebug() << "User is already in the database" << " Index is: " << userIndex << endl;
        qDebug() << "User is already in the database" << " Index is: " << userIndex << endl;
-        QMessageBox::information(this,"Logged In","Welcome Back " + name + "!");
+        QMessageBox::information(this,"Logged In","Welcome, " + name + "!");
+
+
+        customer = new customerScreen(this);
+        customer->show();
+        this->hide();
+
 
 
     }
     else{
-        QMessageBox::information(this,"Logged In","Welcome to iRobots!");
-    }
-    customer = new customerScreen(this);
-    customer->show();
-    this->hide();
 
+        //QMessageBox::information(this,"Logged In","Welcome to iRobots!");
+        newCust = new addCustomer(this, ui->login_lineEdit_user->text());
+        newCust->show();
+        this->hide();
+
+    }
 }
 
 void MainWindow::on_actionAdministrator_Login_triggered()
