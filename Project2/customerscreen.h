@@ -61,9 +61,13 @@ private slots:
      * @brief on_pushButton_orderNow_clicked handles order form button
      */
     void on_pushButton_orderNow_clicked();
-
+    /**
+     * @brief on_pushButton_testimonial_clicked handles the testimonial button
+     */
     void on_pushButton_testimonial_clicked();
-
+    /**
+     * @brief on_pushButton_contact_clicked handles the contact button
+     */
     void on_pushButton_contact_clicked();
 
 private:

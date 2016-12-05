@@ -17,13 +17,23 @@ class help : public QMainWindow
     Q_OBJECT
 
 public:
+    /**
+     * @brief help default constructor
+     * @param parent
+     */
     explicit help(QWidget *parent = 0);
     ~help();
 
 private slots:
+    /**
+     * @brief on_pushButton_clicked handles the close button
+     */
     void on_pushButton_clicked();
 
 private:
+    /**
+     * @brief ui base ui
+     */
     Ui::help *ui;
 };
 

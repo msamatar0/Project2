@@ -17,13 +17,23 @@ class testimonials : public QMainWindow
     Q_OBJECT
 
 public:
+    /**
+     * @brief testimonials default constructor
+     * @param parent
+     */
     explicit testimonials(QWidget *parent = 0);
     ~testimonials();
 
 private slots:
+    /**
+     * @brief on_pushButton_clicked handles the close button
+     */
     void on_pushButton_clicked();
 
 private:
+    /**
+     * @brief ui base ui
+     */
     Ui::testimonials *ui;
 };
 

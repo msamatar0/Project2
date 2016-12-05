@@ -17,15 +17,27 @@ class contact : public QMainWindow
     Q_OBJECT
 
 public:
+    /**
+     * @brief contact default constructor
+     * @param parent
+     */
     explicit contact(QWidget *parent = 0);
     ~contact();
 
 private slots:
+    /**
+     * @brief on_pushButton_clicked handles the close button
+     */
     void on_pushButton_clicked();
-
+    /**
+     * @brief on_pushButton_2_clicked handles the send button
+     */
     void on_pushButton_2_clicked();
 
 private:
+    /**
+     * @brief ui base ui
+     */
     Ui::contact *ui;
 };
 
