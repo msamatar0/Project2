@@ -1,14 +1,18 @@
+/**************************************************************************************************
+ * This file opens the help window, this window just has a description of what the program does.
+ * It has an exit button to close the window when user is done.
+**************************************************************************************************/
+
 #ifndef HELP_H
 #define HELP_H
 
-#include <QWidget>
-//#include "customerscreen.h"
+#include <QMainWindow>
 
 namespace Ui {
 class help;
 }
 
-class help : public QWidget
+class help : public QMainWindow
 {
     Q_OBJECT
 
@@ -21,7 +25,6 @@ private slots:
 
 private:
     Ui::help *ui;
-    //customerScreen *customer;
 };
 
 #endif // HELP_H

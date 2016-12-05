@@ -9,6 +9,8 @@
 #include "salespitch.h"
 #include "help.h"
 #include "orderform.h"
+#include "contact.h"
+#include "testimonials.h"
 
 namespace Ui {
 class customerScreen;
@@ -60,10 +62,16 @@ private slots:
      */
     void on_pushButton_orderNow_clicked();
 
+    void on_pushButton_testimonial_clicked();
+
+    void on_pushButton_contact_clicked();
+
 private:
     /**
      * All potential windows
      */
+    testimonials *showTestimonials;
+    contact *contactUs;
     help *helpMe;
     Record record;
     productView *products;

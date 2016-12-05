@@ -79,3 +79,15 @@ void customerScreen::on_pushButton_orderNow_clicked()
     form->show();
 
 }
+
+void customerScreen::on_pushButton_testimonial_clicked()
+{
+    showTestimonials = new testimonials(this);
+    showTestimonials->show();
+}
+
+void customerScreen::on_pushButton_contact_clicked()
+{
+    contactUs = new contact(this);
+    contactUs->show();
+}

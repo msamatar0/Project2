@@ -2,7 +2,7 @@
 #include "ui_help.h"
 
 help::help(QWidget *parent) :
-    QWidget(parent),
+    QMainWindow(parent),
     ui(new Ui::help)
 {
     ui->setupUi(this);
@@ -15,9 +15,6 @@ help::~help()
 
 void help::on_pushButton_clicked()
 {
-    //customer = new customerScreen(this);
-    //this->hide();
-    //customer->show();
     this->parentWidget()->show();
     this->close();
 }
